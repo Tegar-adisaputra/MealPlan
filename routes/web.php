@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('splashLogin',[
+    return view('login',[
         "title" => "Login"
     ]);
 });
@@ -33,10 +33,6 @@ Route::get('halamanresto', function () {
         "title" => "resto"
     ]);
 });
-Route::get('splashscreen', function () {
-    return view('/splashscreen',[
-        "title" => "."
-    ]);
-});
+
 
 
