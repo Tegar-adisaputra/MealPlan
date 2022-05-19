@@ -1,10 +1,11 @@
 @extends('layout/layout')
 @section('container')
 @include('layout.header')
-<h1>test</h1>
+
 <div class="searchbar mt-5">
     <form>
         <input class="kolomsearch"type="text" placeholder="Search..." name="search">
+        <i class=" btn fas fa-search searchbtn"></i>
     </form>
 </div>
 <div id="demo" class="carousel slide mt-5" data-ride="carousel">
