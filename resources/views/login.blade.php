@@ -2,7 +2,7 @@
 @section('container')
 @include('layout.splashscreen')
     <div class="center">
-      <h1>Sign In</h1>
+      <h1>Login</h1>
       <form method="post">
         <div class="txt_field">
           <input type="text" required>
