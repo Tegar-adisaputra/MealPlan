@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\HalamanUtamaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +17,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login',[
-        "title" => "Login"
+    return view('/halamanutama', [
+        "title" => "Home",
+        "active" => 'home'
     ]);
 });
-Route::get('register', function () {
-    return view('/register',[
-        "title" => "Register"
-    ]);
-});
-Route::get('halamanutama', function () {
-    return view('/halamanutama',[
-        "title" => "Home"
-    ]);
-});
+
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/halamanutama', [HalamanUtamaController::class, 'index']);
+
 Route::get('halamanresto', function () {
     return view('/halamanresto',[
         "title" => "resto"

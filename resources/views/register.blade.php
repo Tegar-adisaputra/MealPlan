@@ -2,26 +2,42 @@
 @section('container')
     <div class="center">
     <h1>Register</h1>
-      <form method="post">
-      <div class="txt_field">
-          <input type="text" required>
+      <form action="/register" method="post">
+        @csrf
+        <div class="txt_field">
+          <input type="text" name="username" class="@error('username') is-invalid @enderror" id="username" required value="{{ old('username') }}">
           <span></span>
-          <label>Username</label>
+          <label for="username">Username</label>
+         @error('username')
+            <div class="invalid-feedback">
+              {{ $message }}
+            </div>
+         @enderror
         </div>
         <div class="txt_field">
-          <input type="text" required>
+          <input type="email" name="email" class="@error('email') is-invalid @enderror" id="email" required value="{{ old('email') }}">
           <span></span>
-          <label>Email</label>
+          <label for="email">Email</label>
+          @error('email')
+            <div class="invalid-feedback">
+              {{ $message }}
+            </div>
+         @enderror
         </div>
         <div class="txt_field">
-          <input type="password" required>
+          <input type="password" name="password" class="@error('password') is-invalid @enderror" id="password" required>
           <span></span>
-          <label>Password</label>
+          <label for="password">Password</label>
+          @error('password')
+            <div class="invalid-feedback">
+              {{ $message }}
+            </div>
+         @enderror
         </div>
-        <div class="pass">Forgot Password?</div>
+        
         <input type="submit" value="Register">
         <div class="signup_link">
-          Already a member? <a href="/"><b>Login</b></a>
+          Already a member? <a href="/login"><b>Login</b></a>
         </div>
       </form>
     </div>    
