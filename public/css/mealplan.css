@@ -232,17 +232,23 @@ input[type="submit"]:hover {
     text-align: left;
     position: -webkit-sticky;
     position: sticky;
+    height: 50px;
+    width: 45%;
+    margin-left: 310px;
     top: 120px;
     z-index: 99;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
     background-color: #f8f0df;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .kolomsearch {
-    width: 100%;
+    padding-top: 8px;
+    height: 40px;
+    width: 85%;
+    margin-left: 15px;
     background-color: #f8f0df;
     border: none;
-    border-radius: 7px;
+    border-radius: 15px;
 }
 .searchbtn {
     text-align: right;
