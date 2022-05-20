@@ -2,8 +2,17 @@
     <div class="h1h">
         <h1>MealPlan</h1>
     </div>
-
-    <ul class="navbar-nav">
+    <div class="dropdown">
+        <i class="fas fa-list dropbtn">
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </i>
+    
+    </div>
+    <!-- <ul class="navbar-nav navbar">
         @auth
             {{-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -42,12 +51,13 @@
                 </ul>
              </li>
         @else
-            <li class="nav-item">
+            <li class="nav-item login " >
                 <a href="/login" class="nav-link" {{ ($active === "login") ? 'active' : '' }}><i class="fa-solid fa-right-to-bracket"></i> 
                     Login
                 </a>
             </li>
             @endauth
-        </ul>
+        </ul> -->
+        
     
 </div>
