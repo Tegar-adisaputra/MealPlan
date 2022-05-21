@@ -129,5 +129,5 @@
   <a href="#people">People</a>
   <a href="#work">Work</a>
 </div> -->
-
+@include('layout.footer')
 @endsection
