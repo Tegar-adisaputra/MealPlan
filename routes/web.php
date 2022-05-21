@@ -6,6 +6,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HalamanUtamaController;
 use App\Http\Controllers\HalamanRestoController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SplashScreenController;
 
 /*
 |--------------------------------------------------------------------------
