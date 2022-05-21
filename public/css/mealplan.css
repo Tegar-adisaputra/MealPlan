@@ -133,7 +133,7 @@ form .txt_field {
 }
 .notif {
     position: absolute;
-    top: 9%;
+    top: 13%;
     z-index: 99;
     left: 50%;
     transform: translate(-50%, -50%);

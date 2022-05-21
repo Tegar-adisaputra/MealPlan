@@ -2,16 +2,37 @@
     <div class="h1h">
         <h1>MealPlan</h1>
     </div>
+
+    
     <div class="dropdown">
-        <i class="fas fa-list dropbtn">
+        <ul class="navbar-nav dropbtn">
+            @auth
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">
+                    Selamat datang, {{ auth()->user()->username }}
+                </a>
+            </li>
             <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <a href="/profile"><i class="fa-solid fa-circle-user"></i> Profil Saya</a>
+                <div class="dropdown-divider"></div>
+                <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
             </div>
-        </i>
+            @else
+            <li class="nav-item">
+                <a href="/login" class="nav-link" {{ ($active === "login") ? 'active' : '' }}><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+            </li>
+            @endauth
+        </ul>
+        {{-- <i class="fas fa-list dropbtn"> --}}
+       {{-- <i class="fa-solid fa-angle-down dropbtn">
+            <div class="dropdown-content">
+                <a href="/profile"><i class="fa-solid fa-circle-user"></i> Profile Saya</a>
+                <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </div>
+        </i> --}}
     
     </div>
+    
     <!-- <ul class="navbar-nav navbar">
         @auth
             {{-- <li class="nav-item dropdown">

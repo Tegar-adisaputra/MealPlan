@@ -2,12 +2,12 @@
 @section('container')
 @include('layout.header')
 
-<div class="searchbar mt-5">
+{{-- <div class="searchbar mt-5">
     <form>
         <input class="kolomsearch"type="text" placeholder="Search..." name="search">
         <i class=" btn fas fa-search searchbtn"></i>
     </form>
-</div>
+</div> --}}
 <div id="demo" class="carousel slide mt-5" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
