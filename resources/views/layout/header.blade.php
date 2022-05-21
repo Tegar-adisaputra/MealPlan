@@ -8,8 +8,8 @@
         <ul class="navbar-nav dropbtn">
             @auth
             <li class="nav-item dropdown">
-                <a class="nav-link" href="#">
-                    Selamat datang, {{ auth()->user()->username }}
+                <a class="nav-link sapa" href="#">
+                    Selamat datang,<b> {{ auth()->user()->username }}</b>
                 </a>
             </li>
             <div class="dropdown-content">
@@ -28,5 +28,5 @@
             @endauth
         </ul>    
     </div>
-    
+
 </div>
