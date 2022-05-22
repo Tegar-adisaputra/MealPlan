@@ -10,7 +10,13 @@ class ProfileController extends Controller
     {
         return view('/profile',  [
             'title' => 'Profile',
-            'active' => 'profile'
+            'active' => 'profile',
+            'Name' => 'Mochamad Ridwan Tri NurDadi',
+            'Gender' => 'Laki-Laki',
+            'Contact' => '087783270137',
+            'Email' => 'mrdwntrind999@gmail.com',
+            'Image' => 'profileuser1.jpg'
         ]);
     }
 }
+
