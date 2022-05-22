@@ -44,4 +44,3 @@ Route::get('/halamanresto', [HalamanRestoController::class, 'index']);
 
 Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
 
-
