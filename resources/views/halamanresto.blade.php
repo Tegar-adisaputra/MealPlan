@@ -46,7 +46,7 @@
 <div class="container mt-3 mb-3 ">
     <div class="row desc">
         <div class="col-md-6 mt-3">
-        <h1>Restoran Antar</h1>
+        <h1 class="font">Restoran Antar</h1>
         <h5>jalan kebayoran baru No.15, Jakarta Selatan</h5>
         <hr>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -63,7 +63,7 @@
     </div>
     
     <div class="row mt-5 desc">
-        <div class="col-md-12 mt-3">
+        <div class="col-md-12 mt-3 font">
             <h2>Review</h2>
         </div>
         <div class="col-md 12">

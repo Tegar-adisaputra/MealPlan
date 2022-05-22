@@ -1,11 +1,9 @@
 @extends('layout/layout')
 @section('container')
-@include('layout.splashscreen')
 @include('layout.header')
-
-   <div class="splash text-center">
+   <!-- <div class="splash text-center">
         <h1 class="fade-in">MealPlan</h1>
-    </div>
+    </div> -->
 <!-- fitur search coming soon -->
 <!-- <div class="searchbar mt-5">
     <form>
@@ -49,7 +47,7 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
-<h2 class="mt-3">Terdekat</h2>
+<h2 class="mt-5 font">Terdekat</h2>
     <div class="scrolling-wrapper row flex-row flex-nowrap mt-2 pb-4 pt-2">
       <div class="col-3">
 				<div class="card card-block card-1"></div>
@@ -82,7 +80,7 @@
 				<div class="card card-block card-1"></div>
 			</div>
     </div>
-    <h2 class="mt-3">Resto Pilihan</h2>
+    <h2 class="mt-3 font">Resto Pilihan</h2>
     <div class="scrolling-wrapper row flex-row flex-nowrap mt-2 pb-4 pt-2">
       <div class="col-3">
 				<div class="card card-block card-1"></div>

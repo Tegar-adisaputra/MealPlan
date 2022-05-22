@@ -3,6 +3,8 @@ body {
     padding: 0;
     background: linear-gradient(120deg, #79b4b7, #79b4b7);
     height: 100vh;
+    font-family: "Acme", sans-serif;
+    color: #f8f0df;
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -218,6 +220,12 @@ form .txt_field {
     font-size: 13px;
     color: #aaa;
     margin-bottom: 0;
+}
+.font {
+    color: #f8f0df;
+    font-size: 40px;
+    font-family: "Acme", sans-serif;
+    text-shadow: 1px 2px 2px #707070;
 }
 .notif {
     position: absolute;
