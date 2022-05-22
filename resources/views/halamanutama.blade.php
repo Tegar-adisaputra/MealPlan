@@ -1,5 +1,6 @@
 @extends('layout/layout')
 @section('container')
+@include('layout.splashscreen')
 @include('layout.header')
 
 <!-- fitur search coming soon -->

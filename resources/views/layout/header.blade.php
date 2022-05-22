@@ -19,6 +19,8 @@
             </li>
             <div class="dropdown-content">
                 <a href="/profile"><i class="fa-solid fa-circle-user"></i> Profil Saya</a>
+                <div class="dropdown-divider"></div>
+                <!-- <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> -->
                 <li>
                     <form action="/logout" method="post">
                         @csrf
