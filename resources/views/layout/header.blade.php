@@ -18,8 +18,8 @@
                 <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
             </div>
             @else
-            <li class="nav-item">
-                <a href="/login" class="nav-link" {{ ($active === "login") ? 'active' : '' }}><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+            <li class="nav-item dropdown">
+                <a href="/login" class="nav-link sapa" {{ ($active === "login") ? 'active' : '' }}><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
             </li>
             @endauth
         </ul>
