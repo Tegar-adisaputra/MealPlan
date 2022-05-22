@@ -1,9 +1,7 @@
 <div class="header">
     <!-- bikin disini aja -->
-    <a href="" style="text-decoration:none;">
+    <a href="/" style="text-decoration:none;">
     <div class="h1h">
-        <!-- <a href="/"> MealPlan</a>
-        {{-- <h1>MealPlan</h1> --}} -->
         <h1>MealPlan</h1>
     </div>
     </a>
