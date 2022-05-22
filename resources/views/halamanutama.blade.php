@@ -2,6 +2,9 @@
 @section('container')
 @include('layout.header')
 
+   <div class="splash text-center">
+        <h1 class="fade-in">MealPlan</h1>
+    </div>
 <!-- fitur search coming soon -->
 <!-- <div class="searchbar mt-5">
     <form>
