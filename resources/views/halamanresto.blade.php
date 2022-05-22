@@ -1,5 +1,6 @@
 @extends('layout/layout')
 @section('container')
+@include('layout.splashscreen')
 @include('layout.header')
 <div id="demo" class="carousel slide mt-5" data-ride="carousel">
   <ul class="carousel-indicators">
