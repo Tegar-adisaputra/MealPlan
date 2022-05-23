@@ -16,7 +16,7 @@ class CreateRestoran extends Migration
         Schema::create('restoran', function (Blueprint $table) {
             $table->id();
             $table->string('nama_resto');  
-            $table->string('deskripsi_resto');
+            $table->text('deskripsi_resto');
             $table->string('alamat_resto');
             $table->string('map_resto');
             
