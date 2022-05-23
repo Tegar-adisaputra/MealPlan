@@ -1,12 +1,10 @@
 <div class="header">
-    <!-- bikin disini aja -->
     <a href="/" style="text-decoration:none;">
     <div class="h1h">
         <h1>MealPlan</h1>
     </div>
     </a>
 
-    
     <div class="dropdown">
         <ul class="navbar-nav dropbtn">
             @auth
