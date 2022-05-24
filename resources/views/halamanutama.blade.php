@@ -14,8 +14,8 @@
 <div id="demo" class="carousel slide mt-5" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
+    {{-- <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li> --}}
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -25,20 +25,20 @@
         <p>Rumah Makan Soto Betawi Asli</p>
       </div>   
     </div>
-    <div class="carousel-item">
-      <img src="img/resto2.jpg" alt="Chicago" width="1100" height="500">
+    {{-- <div class="carousel-item">
+      <img src="img/dummy.jpg" alt="Chicago" width="1100" height="500">
       <div class="carousel-caption">
-        <h3>Sweet House</h3>
-        <p>Aneka Dessert</p>
-      </div>   
+        <h3>Coming Soon</h3>
+        {{-- <p>Aneka Dessert</p> --}}
+      {{-- </div>   
     </div>
     <div class="carousel-item">
-      <img src="img/resto3.jpg" alt="New York" width="1100" height="500">
+      <img src="img/dummy.jpg" alt="New York" width="1100" height="500">
       <div class="carousel-caption">
-        <h3>Daniel's Cuisine</h3>
+        <h3>Coming Soon</h3>
         <p>Western Food</p>
       </div>   
-    </div>
+    </div> --}}
   </div>
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
@@ -102,11 +102,39 @@
           <img src="img/dummy.jpg" alt="" class="gambarresto">
             <hr>
             <center>
-              <h3 class="font3">Nama Resto</h3>
+              <h3 class="font3">Coming Soon</h3>
             </center>
         </div>
 			</div>
-			<div class="col-3">
+      <div class="col-3">
+				<div class="card card-block card-1">
+          <img src="img/dummy.jpg" alt="" class="gambarresto">
+            <hr>
+            <center>
+              <h3 class="font3">Coming Soon</h3>
+            </center>
+        </div>
+			</div>
+      <div class="col-3">
+				<div class="card card-block card-1">
+          <img src="img/dummy.jpg" alt="" class="gambarresto">
+            <hr>
+            <center>
+              <h3 class="font3">Coming Soon</h3>
+            </center>
+        </div>
+			</div>
+      <div class="col-3">
+				<div class="card card-block card-1">
+          <img src="img/dummy.jpg" alt="" class="gambarresto">
+            <hr>
+            <center>
+              <h3 class="font3">Coming Soon</h3>
+            </center>
+        </div>
+			</div>
+      
+			{{-- <div class="col-3">
 				<div class="card card-block card-1"></div>
 			</div>
 			<div class="col-3">
@@ -114,7 +142,7 @@
 			</div>
 			<div class="col-3">
 				<div class="card card-block card-1"></div>
-			</div>
+			</div> --}}
     </div>
 
 

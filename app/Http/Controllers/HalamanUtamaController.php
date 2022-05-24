@@ -16,6 +16,6 @@ class HalamanUtamaController extends Controller
             'active' => 'halamanutama',
             'data'=>$data
         ]);
-        
     }
+
 }

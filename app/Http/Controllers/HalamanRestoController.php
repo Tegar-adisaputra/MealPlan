@@ -19,8 +19,10 @@ class HalamanRestoController extends Controller
     public function show(Restoran $restoran)
     {
         return view('/halamanresto',[
-            "title"=>"restoran",
-        "restoran"=>$restoran
+            "title"=>"Restoran",
+            "active" => "halamanresto",
+            "restoran"=>$restoran
         ]);
     }
+
 }

@@ -10,24 +10,24 @@
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/resto1.png" alt="Los Angeles" width="1100" height="500">
+      <img src="img/sotobetawi_budian.jpeg" alt="Los Angeles" width="1100" height="500">
       <div class="carousel-caption">
-        <h3>Rumah Makan Antar</h3>
-        <p>Masakan jawa, Sunda, dll</p>
+        <h3>Soto Betawi Bu Dian</h3>
+        <p>Rumah Makan Soto Betawi Asli</p>
       </div>   
     </div>
     <div class="carousel-item">
-      <img src="img/resto2.jpg" alt="Chicago" width="1100" height="500">
+      <img src="img/sotobetawi_budian (1).jpeg" alt="Chicago" width="1100" height="500">
       <div class="carousel-caption">
-        <h3>Sweet House</h3>
-        <p>Aneka Dessert</p>
+        <h3>Soto Betawi Bu Dian</h3>
+        <p>Rumah Makan Soto Betawi Asli</p>
       </div>   
     </div>
     <div class="carousel-item">
-      <img src="img/resto3.jpg" alt="New York" width="1100" height="500">
+      <img src="img/sotobetawi_budian (2).jpeg" alt="New York" width="1100" height="500">
       <div class="carousel-caption">
-        <h3>Daniel's Cuisine</h3>
-        <p>Western Food</p>
+        <h3>Soto Betawi Bu Dian</h3>
+        <p>Rumah Makan Soto Betawi Asli</p>
       </div>   
     </div>
   </div>
@@ -49,7 +49,10 @@
         <h1 class="font">{{ $restoran['nama_resto'] }}</h1>
         <h5>{{ $restoran['alamat_resto'] }}</h5>
         <hr>
-        <p>{{$restoran['deskripsi_resto']}}</p>
+        <p>{{$restoran['deskripsi_resto']}}</p><br><br><br>
+        <p>Kontak: <br>
+          {{$restoran['no_telp']}}
+        </p>
         </div>
         <div class="col-md-6 mt-5">
         <iframe class="mb-3"src="{{$restoran['map_resto']}}" 
@@ -65,8 +68,8 @@
             <hr>
             <br>
             <div class="reviewbox">
-                <h5><b>Rizky</b></h5>
-                <p>"<i>Tempat bagus banget luas</i>"</p>
+                {{-- <h5><b>Rizky</b></h5> --}}
+                <p class="font-weight-light font-italic">"<i>Belum ada review</i>"</p>
             </div>
             
         </div>
