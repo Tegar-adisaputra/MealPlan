@@ -14,27 +14,10 @@ class ProfileController extends Controller
         $this->middleware('auth');
     }
 
-   /*  public function index()
-    {
-        return view('/profile',  [
-            'title' => 'Profile',
-            'active' => 'profile',
-            'name' => 'Mochamad Ridwan Tri NurDadi',
-            'gender' => 'Laki-Laki',
-            'contact' => '087783270137',
-            'email' => 'mrdwntrind999@gmail.com',
-            'image' => 'profile1.jpg'
-        ]);
-    } */
-
     public function index()
     {
         $user = User::where('id', Auth::user()->id)->first();
 
-        /* return view('/profile',  [
-            'title' => 'Profile',
-            'active' => 'profile'
-        ]); */
         return view('/profile', compact('user'), [
                 'title' => 'Profile',
                 'active' => 'profile'
