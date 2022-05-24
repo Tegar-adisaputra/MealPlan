@@ -8,9 +8,11 @@ class HalamanRestoController extends Controller
 {
     public function index()
     {
+        $data = Restoran::all();
         return view('/halamanresto',  [
             'title' => 'Resto',
-            'active' => 'halamanresto'
+            'active' => 'halamanresto',
+            'data'=>$data
         ]);
     }
 }

@@ -84,17 +84,27 @@
 
     <h2 class="mt-3 font">Daftar Restoran</h2>
     <div class="scrolling-wrapper row flex-row flex-nowrap mt-2 pb-4 pt-2">
-      <div class="col-3">
+    @foreach($data as $resto)  
+    <div class="col-3">
+      <a href="{{$resto["id"]}}">
+          <div class="card card-block card-1">
+            <img src="/img/{{ $resto['gambar'] }}" alt="" class="gambarresto">
+            <hr>
+            <center>
+              <h3 class="font3">{{ $resto['nama_resto'] }}</h3>
+            </center>
+          </div>
+        </a>
+			</div>
+      @endforeach
+			<div class="col-3">
 				<div class="card card-block card-1">
           <img src="img/dummy.jpg" alt="" class="gambarresto">
-          <hr>
-          <center>
-            <h3 class="font3">Nama Resto</h3>
-          </center>
+            <hr>
+            <center>
+              <h3 class="font3">Nama Resto</h3>
+            </center>
         </div>
-			</div>
-			<div class="col-3">
-				<div class="card card-block card-1"></div>
 			</div>
 			<div class="col-3">
 				<div class="card card-block card-1"></div>

@@ -46,18 +46,13 @@
 <div class="container mt-3 mb-3 ">
     <div class="row desc">
         <div class="col-md-6 mt-3">
-        <h1 class="font">Restoran Antar</h1>
-        <h5>jalan kebayoran baru No.15, Jakarta Selatan</h5>
+        <h1 class="font">{{ $data['nama_resto'] }}</h1>
+        <h5>{{ $data['alamat_resto'] }}</h5>
         <hr>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Beatae animi maxime nihil reiciendis autem quidem laudantium 
-            magnam deleniti inventore possimus. Pariatur sint illum temporibus 
-            cupiditate officia error iure, enim ipsam quasi. Amet placeat 
-            dignissimos tempora nemo magni minus sequi a incidunt rem deleniti, 
-            maxime fuga itaque, nostrum aspernatur, perspiciatis quis?</p>
+        <p>{{$data['deskripsi_resto']}}</p>
         </div>
         <div class="col-md-6 mt-5">
-        <iframe class="mb-3"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4716.652539852231!2d106.80075010891677!3d-6.2351299000680145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5c76e93c1857863b!2sUniversitas%20Al-Azhar%20Indonesia!5e0!3m2!1sid!2sid!4v1652788207985!5m2!1sid!2sid" 
+        <iframe class="mb-3"src="{{$data['map_resto']}}" 
             width="525" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
