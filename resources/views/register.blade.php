@@ -1,7 +1,7 @@
 @extends('layout/layout')
 @section('container')
     <div class="center">
-    <h1>Register</h1>
+    <h1 class="font2">Register</h1>
       <form action="/register" method="post">
         @csrf
         <div class="txt_field">

@@ -17,7 +17,7 @@
     </div>
 
     <div class="center">
-      <h1>Login</h1>
+      <h1 class="font2">Login</h1>
       <form action="/login" method="post">
         @csrf
         <div class="txt_field">

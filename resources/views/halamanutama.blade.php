@@ -1,6 +1,5 @@
 @extends('layout/layout')
 @section('container')
-@include('layout.splashscreen')
 @include('layout.header')
    <!-- <div class="splash text-center">
         <h1 class="fade-in">MealPlan</h1>
@@ -48,7 +47,7 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
-{{-- <h2 class="mt-5 font">Terdekat</h2>
+<!-- {{-- <h2 class="mt-5 font">Terdekat</h2>
     <div class="scrolling-wrapper row flex-row flex-nowrap mt-2 pb-4 pt-2">
       <div class="col-3">
 				<div class="card card-block card-1"></div>
@@ -80,26 +79,19 @@
 			<div class="col-3">
 				<div class="card card-block card-1"></div>
 			</div>
-    </div> --}}
-    <h2 class="mt-3 font">Resto Pilihan</h2>
+    </div> --}} -->
+
+
+    <h2 class="mt-3 font">Daftar Restoran</h2>
     <div class="scrolling-wrapper row flex-row flex-nowrap mt-2 pb-4 pt-2">
       <div class="col-3">
-				<div class="card card-block card-1"></div>
-			</div>
-			<div class="col-3">
-				<div class="card card-block card-1"></div>
-			</div>
-			<div class="col-3">
-				<div class="card card-block card-1"></div>
-			</div>
-			<div class="col-3">
-				<div class="card card-block card-1"></div>
-			</div>
-			<div class="col-3">
-				<div class="card card-block card-1"></div>
-			</div>
-			<div class="col-3">
-				<div class="card card-block card-1"></div>
+				<div class="card card-block card-1">
+          <img src="img/dummy.jpg" alt="" class="gambarresto">
+          <hr>
+          <center>
+            <h3 class="font3">Nama Resto</h3>
+          </center>
+        </div>
 			</div>
 			<div class="col-3">
 				<div class="card card-block card-1"></div>
@@ -115,22 +107,6 @@
 			</div>
     </div>
 
-<!-- <div class="scrollmenu mt-5">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <a href="#support">Support</a>
-  <a href="#blog">Blog</a>
-  <a href="#tools">Tools</a>  
-  <a href="#base">Base</a>
-  <a href="#custom">Custom</a>
-  <a href="#more">More</a>
-  <a href="#logo">Logo</a>
-  <a href="#friends">Friends</a>
-  <a href="#partners">Partners</a>
-  <a href="#people">People</a>
-  <a href="#work">Work</a>
-</div> -->
+
 @include('layout.footer')
 @endsection

@@ -21,7 +21,8 @@
     {{-- Font Awesome Icons --}}   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-    <title>MealPlan | <?php echo $title?></title>
+    <title><?php echo $title?></title>
+    <link rel="icon" type="image" href="/img/Logo.png">
   </head>
 </head>
 <body>
