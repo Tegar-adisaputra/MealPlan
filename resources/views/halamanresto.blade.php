@@ -46,13 +46,13 @@
 <div class="container mt-3 mb-3 ">
     <div class="row desc">
         <div class="col-md-6 mt-3">
-        <h1 class="font">{{ $data['nama_resto'] }}</h1>
-        <h5>{{ $data['alamat_resto'] }}</h5>
+        <h1 class="font">{{ $restoran['nama_resto'] }}</h1>
+        <h5>{{ $restoran['alamat_resto'] }}</h5>
         <hr>
-        <p>{{$data['deskripsi_resto']}}</p>
+        <p>{{$restoran['deskripsi_resto']}}</p>
         </div>
         <div class="col-md-6 mt-5">
-        <iframe class="mb-3"src="{{$data['map_resto']}}" 
+        <iframe class="mb-3"src="{{$restoran['map_resto']}}" 
             width="525" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>

@@ -35,6 +35,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/halamanutama', [HalamanUtamaController::class, 'index']);
 
 Route::get('/halamanresto', [HalamanRestoController::class, 'index']);
+Route::get('/halamanresto/{restoran}', [HalamanRestoController::class, 'show']);
 /* Route::get('halamanresto', function () {
     return view('/halamanresto',[
         "title" => "resto"

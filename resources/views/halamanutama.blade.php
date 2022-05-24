@@ -86,7 +86,7 @@
     <div class="scrolling-wrapper row flex-row flex-nowrap mt-2 pb-4 pt-2">
     @foreach($data as $resto)  
     <div class="col-3">
-      <a href="{{$resto["id"]}}">
+      <a href="/halamanresto/{{$resto["id"]}}">
           <div class="card card-block card-1">
             <img src="/img/{{ $resto['gambar'] }}" alt="" class="gambarresto">
             <hr>
