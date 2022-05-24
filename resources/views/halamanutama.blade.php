@@ -19,10 +19,10 @@
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/resto1.png" alt="Los Angeles" width="1100" height="500">
+      <img src="img/sotobetawi_budian.jpeg" alt="Los Angeles" width="1100" height="500">
       <div class="carousel-caption">
-        <h3>Rumah Makan Antar</h3>
-        <p>Masakan jawa, Sunda, dll</p>
+        <h3>Soto Betawi Bu Dian</h3>
+        <p>Rumah Makan Soto Betawi Asli</p>
       </div>   
     </div>
     <div class="carousel-item">
