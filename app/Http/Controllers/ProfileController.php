@@ -28,7 +28,7 @@ class ProfileController extends Controller
     {
         $this->validate($request, [
             'nohp' => 'numeric|min:10',
-            'password' => 'min:5|max:255|confirmed'
+            'password' => 'confirmed'
         ]);
 
         $user = User::where('id', Auth::user()->id)->first();
