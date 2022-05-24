@@ -17,12 +17,11 @@ class CreateRestoran extends Migration
             $table->id();
             $table->string('nama_resto');  
             $table->text('deskripsi_resto');
-            $table->string('alamat_resto');
             $table->string('map_resto');
+            $table->string('nomer_telepon');
+            $table->string('alamat_resto');
+            $table->timestamp('publish_at')->nullable();
             
-            
-            
-
         });
     }
 
@@ -34,5 +33,6 @@ class CreateRestoran extends Migration
     public function down()
     {
         Schema::dropIfExists('restoran');
+
     }
 }
