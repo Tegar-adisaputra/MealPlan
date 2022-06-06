@@ -1,6 +1,7 @@
 @extends('layout/layout')
 @section('container')
 @include('layout.header')
+@include('layout.splashscreen')
    <!-- <div class="splash text-center">
         <h1 class="fade-in">MealPlan</h1>
     </div> -->
