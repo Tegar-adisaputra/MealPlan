@@ -48,7 +48,7 @@ Route::get('/halamanresto/{restoran}', [HalamanRestoController::class, 'show']);
 Route::get('/profile', [ProfileController::class, 'index'])/* ->middleware('auth') */;
 Route::post('/profile', [ProfileController::class, 'update']);
 
-//BAGIAN UNTUK ADMIN RESTO
+//BAGIAN UNTUK SUPER ADMIN
 Route::get('/admin/home', function () {
     return view('/admin/home',[
         "title" => "home"
@@ -57,6 +57,13 @@ Route::get('/admin/home', function () {
 
 Route::get('/admin/login', function () {
     return view('/admin/login',[
+        "title" => "login"
+    ]);
+});
+
+//BAGIAN UNTUK ADMIN RESTO
+Route::get('/resto/login', function () {
+    return view('/resto/login',[
         "title" => "login"
     ]);
 });
