@@ -18,7 +18,7 @@ use App\Models\Halamanutama;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//BAGIAN UNTUK USER
 Route::get('/', function () {
     $data = Halamanutama::all();
     return view('/halamanutama', [
@@ -47,3 +47,16 @@ Route::get('/halamanresto/{restoran}', [HalamanRestoController::class, 'show']);
 
 Route::get('/profile', [ProfileController::class, 'index'])/* ->middleware('auth') */;
 Route::post('/profile', [ProfileController::class, 'update']);
+
+//BAGIAN UNTUK ADMIN RESTO
+Route::get('/admin/home', function () {
+    return view('/admin/home',[
+        "title" => "home"
+    ]);
+});
+
+Route::get('/admin/login', function () {
+    return view('/admin/login',[
+        "title" => "login"
+    ]);
+});
