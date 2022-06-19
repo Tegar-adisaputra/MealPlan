@@ -1,6 +1,6 @@
 @extends('layout.resto')
 @section('container')
-<div class="row">
+<div class="row login">
     <div class="col-lg-3 col-md-2"></div>
     <div class="col-lg-6 col-md-8 login-box">
         <div class="col-lg-12 login-key mt-3">
@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-lg-5">
                             <p>Ingin menjadi mitra? 
-                                <b><a href="#" target="blank" style="color: #707070;">Daftar sekarang!</a></b>
+                                <b><a href="/resto/register" target="blank" style="color: black;">Daftar sekarang!</a></b>
                             </p>
                         </div>
                     </div>

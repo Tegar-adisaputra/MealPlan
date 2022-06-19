@@ -67,3 +67,9 @@ Route::get('/resto/login', function () {
         "title" => "login"
     ]);
 });
+
+Route::get('/resto/register', function () {
+    return view('/resto/register',[
+        "title" => "Register"
+    ]);
+});
