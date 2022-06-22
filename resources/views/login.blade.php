@@ -21,10 +21,10 @@
       <form action="/login" method="post">
         @csrf
         <div class="txt_field">
-          <input type="email" name="email" class="@error('email') is-invalid @enderror" id="email" required value="{{ old('email') }}">
+          <input type="text" name="username" class="@error('username') is-invalid @enderror" id="username" required value="{{ old('username') }}">
           <span></span>
-          <label for="email">Email</label>
-          @error('email')
+          <label for="username">Username</label>
+          @error('username')
             <div class="invalid-feedback">
               {{ $message }}
             </div>

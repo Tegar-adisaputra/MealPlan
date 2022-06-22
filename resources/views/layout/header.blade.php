@@ -5,7 +5,7 @@
     </div>
     </a>
 
-    {{-- <div class="dropdown">
+    <div class="dropdown">
         <ul class="navbar-nav dropbtn">
             @auth
             <li class="nav-item dropdown">
@@ -30,6 +30,6 @@
             </li>
             @endauth
         </ul>    
-    </div> --}}
+    </div>
 
 </div>
