@@ -73,3 +73,9 @@ Route::get('/resto/register', function () {
         "title" => "Register"
     ]);
 });
+
+Route::get('/resto/profile', function () {
+    return view('/resto/profile',[
+        "title" => "Profile"
+    ]);
+});
