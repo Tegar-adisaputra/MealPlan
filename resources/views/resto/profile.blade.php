@@ -35,8 +35,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12 mt-3">
+                <div class="col-md-6 mt-3">
                     <h5>Deskripsi</h5>
+                    <h6>...</h6>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <h5>kapasitas</h5>
                     <h6>...</h6>
                 </div>
             </div>
