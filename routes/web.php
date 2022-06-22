@@ -67,3 +67,15 @@ Route::get('/resto/login', function () {
         "title" => "login"
     ]);
 });
+
+Route::get('/resto/register', function () {
+    return view('/resto/register',[
+        "title" => "Register"
+    ]);
+});
+
+Route::get('/resto/profile', function () {
+    return view('/resto/profile',[
+        "title" => "Profile"
+    ]);
+});

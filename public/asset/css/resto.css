@@ -39,7 +39,7 @@ body {
     text-align: left;
 }
 
-input[type="text"] {
+/* input[type="text"] {
     background-color: #f8f0df;
     border: none;
     border-bottom: 2px solid #707070;
@@ -50,9 +50,9 @@ input[type="text"] {
     margin-bottom: 20px;
     padding-left: 0px;
     color: #ecf0f5;
-}
+} */
 
-input[type="password"] {
+/* input[type="password"] {
     background-color: #f8f0df;
     border: none;
     border-bottom: 2px solid #707070;
@@ -63,7 +63,7 @@ input[type="password"] {
     padding-left: 0px;
     margin-bottom: 20px;
     color: #ecf0f5;
-}
+} */
 
 .form-group {
     margin-bottom: 40px;
@@ -128,4 +128,34 @@ label {
 
 .loginbttm {
     padding: 0px;
+}
+.register {
+    background-color: #f8f0df;
+    border-radius: 15px;
+    font-family: "Acme", sans-serif;
+}
+.font {
+    color: #f8f0df;
+    font-size: 40px;
+    font-family: "Acme", sans-serif;
+    text-shadow: 1px 2px 2px #707070;
+}
+
+.btn {
+    background-color: #f8f0df;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    transition-duration: 0.5s;
+}
+.btn:hover {
+    background-color: #b6b1a6;
+    transition-duration: 0.4s;
+}
+.login {
+    font-family: "Acme", sans-serif;
+}
+.kotakprofil {
+    background-color: #f8f0df;
+    font-family: "Acme", sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
 }
