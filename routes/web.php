@@ -60,6 +60,7 @@ Route::group([
     Route::middleware(['auth:admin'])->group(function() {
         Route::post('/logout', [Admin\LoginAdminController::class, 'logout'])->name('admin.logout');
         Route::get('/home', [Admin\HomeController::class, 'index'])->name('admin.home');
+        Route::get('/restoterdaftar', [Admin\HomeController::class, 'halaman_restoran']);
     });
     
 });
