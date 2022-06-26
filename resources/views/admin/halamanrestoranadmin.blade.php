@@ -7,6 +7,7 @@
     </div>
     <div class="row kolom">
         <table class="table table-striped text-center ">
+
                 <tr>
                     <th>id</th>
                     <th>Nama Restoran</th>
@@ -26,6 +27,7 @@
                 </tr>
                     @endforeach
             </table>
+
     </div>
 </div>
 @endsection()
