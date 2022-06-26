@@ -1,14 +1,17 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\HalamanUtamaController;
-use App\Http\Controllers\HalamanRestoController;
-use App\Http\Controllers\ProfileController;
 use App\Models\Halamanutama;
+
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\Admin_Resto;
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\HalamanRestoController;
+use App\Http\Controllers\HalamanUtamaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,6 +64,15 @@ Route::group([
     
 });
 
+Route::get('/resto', function () {
+    return view('/listresto',[
+        "title" => "Daftar Resto"
+    ]);
+});
+
+//BAGIAN UNTUK SUPER ADMIN
+/* 
+Route::get('/admin/home', [AdminController::class, 'index']); */
 
 //BAGIAN UNTUK ADMIN RESTO
 /* Route::group([
@@ -76,7 +88,7 @@ Route::group([
     });
     
 }); */
-Route::get('/resto/login', [Admin_Resto\LoginController::class, 'index'])->name('login')->middleware('guest');
+/* Route::get('/resto/login', [Admin_Resto\LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/resto/login', [Admin_Resto\LoginController::class, 'authenticate']);
 Route::post('/resto/logout', [Admin_Resto\LoginController::class, 'logout']);
 
@@ -87,4 +99,4 @@ Route::get('/resto/profile', function () {
     return view('/resto/profile',[
         "title" => "Profile"
     ]);
-});
+}); */

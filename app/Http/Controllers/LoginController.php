@@ -28,7 +28,7 @@ class LoginController extends Controller
             return redirect()->intended('/halamanutama');
         }
 
-        return back()->with('loginError', 'Username atau password Anda salah!');
+        return back()->with('loginError', 'Login tidak berhasil!');
     }
 
     public function logout(Request $request)

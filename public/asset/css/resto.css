@@ -77,7 +77,6 @@ body {
     border-bottom: 2px solid #707070;
     outline: 0;
     background-color: #f8f0df;
-    color: #ecf0f5;
 }
 
 input:focus {
@@ -149,6 +148,9 @@ label {
 .btn:hover {
     background-color: #b6b1a6;
     transition-duration: 0.4s;
+}
+.card {
+    background-color: #f8f0df;
 }
 .login {
     font-family: "Acme", sans-serif;

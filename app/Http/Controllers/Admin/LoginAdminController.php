@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 /* use Auth; */
-use App\Models\admin;
 
 class LoginAdminController extends Controller
 {
