@@ -20,4 +20,14 @@ class HomeController extends Controller
         ]);
     }
 
+    public function halaman_restoran()
+    {
+        $data = Home::all();
+        return view('/admin/halamanrestoranadmin',[
+            'title' => 'Home',
+            'active' => 'halamanutama',
+            'data'=>$data
+        ]);
+    }
+
 }
