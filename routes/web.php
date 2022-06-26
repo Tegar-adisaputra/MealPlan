@@ -7,6 +7,8 @@ use App\Http\Controllers\HalamanUtamaController;
 use App\Http\Controllers\HalamanRestoController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Halamanutama;
+use App\Http\Controllers\Admin;
+use App\Http\Controllers\Admin_Resto;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,40 +41,47 @@ Route::get('/halamanutama', [HalamanUtamaController::class, 'index']);
 
 Route::get('/halamanresto', [HalamanRestoController::class, 'index']);
 Route::get('/halamanresto/{restoran}', [HalamanRestoController::class, 'show']);
-/* Route::get('halamanresto', function () {
-    return view('/halamanresto',[
-        "title" => "resto"
-    ]);
-}); */
 
 Route::get('/profile', [ProfileController::class, 'index'])/* ->middleware('auth') */;
 Route::post('/profile', [ProfileController::class, 'update']);
 
 //BAGIAN UNTUK SUPER ADMIN
-Route::get('/admin/home', function () {
-    return view('/admin/home',[
-        "title" => "home"
-    ]);
+Route::group([
+    'prefix'=>config('admin.prefix'),
+    'namespace' => 'App\\Http\\Controllers',
+], function () {
+    Route::get('/', [Admin\LoginAdminController::class, 'formLogin']);
+    Route::get('/login', [Admin\LoginAdminController::class, 'formLogin'])->name('admin.login');
+    Route::post('/login', [Admin\LoginAdminController::class, 'login']);
+
+    Route::middleware(['auth:admin'])->group(function() {
+        Route::post('/logout', [Admin\LoginAdminController::class, 'logout'])->name('admin.logout');
+        Route::get('/home', [Admin\HomeController::class, 'index'])->name('admin.home');
+    });
+    
 });
 
-Route::get('/admin/login', function () {
-    return view('/admin/login',[
-        "title" => "login"
-    ]);
-});
 
 //BAGIAN UNTUK ADMIN RESTO
-Route::get('/resto/login', function () {
-    return view('/resto/login',[
-        "title" => "login"
-    ]);
-});
+/* Route::group([
+    'prefix'=>config('admin_resto.prefix'),
+    'namespace' => 'App\\Http\\Controllers',
+], function () {
+    Route::get('/', [Admin_Resto\LoginController::class, 'index']);
+    Route::get('/login', [Admin_Resto\LoginController::class, 'index'])->name('resto.login');
+    Route::post('/login', [Admin_Resto\LoginController::class, 'login']);
 
-Route::get('/resto/register', function () {
-    return view('/resto/register',[
-        "title" => "Register"
-    ]);
-});
+    Route::middleware(['auth:admin_resto'])->group(function() {
+        Route::post('/logout', [Admin_Resto\LoginController::class, 'logout'])->name('resto.logout');
+    });
+    
+}); */
+Route::get('/resto/login', [Admin_Resto\LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/resto/login', [Admin_Resto\LoginController::class, 'authenticate']);
+Route::post('/resto/logout', [Admin_Resto\LoginController::class, 'logout']);
+
+Route::get('/resto/register', [Admin_Resto\RegisterController::class, 'index'])->middleware('guest');
+Route::post('/resto/register', [Admin_Resto\RegisterController::class, 'store']);
 
 Route::get('/resto/profile', function () {
     return view('/resto/profile',[

@@ -40,6 +40,16 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+
+        /* 'admin_resto' => [
+            'driver' => 'session',
+            'provider' => 'admin_restos',
+        ], */
     ],
 
     /*
@@ -69,6 +79,16 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\admin::class,
+        ],
+
+        /* 'admin_restos' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\admin_resto::class,
+        ], */
     ],
 
     /*

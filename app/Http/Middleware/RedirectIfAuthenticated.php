@@ -19,6 +19,16 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
+        if(Auth::guard('admin')->check())
+        {
+            return redirect()->route('admin.home');
+        }
+
+        /* if(Auth::guard('admin_resto')->check())
+        {
+            return redirect()->route('resto.home');
+        } */
+        
         $guards = empty($guards) ? [null] : $guards;
 
         foreach ($guards as $guard) {
