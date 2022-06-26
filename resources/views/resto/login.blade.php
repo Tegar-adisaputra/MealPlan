@@ -25,7 +25,7 @@
                         <div class="col-lg-6 login-btm login-text">
                             <!-- Error Message -->
                         </div>
-                        <div class="col-lg-6 login-btm login-button">
+                        <div class="col-lg-6 mb-3">
                             <button type="submit" class="btn btn-outline">LOGIN</button>
                         </div>
                         <div class="col-lg-5">
