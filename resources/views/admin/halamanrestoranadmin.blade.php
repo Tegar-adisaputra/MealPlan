@@ -1,10 +1,11 @@
 @extends('layout.admin')
 @section('container')
-<div class="tombol text-right mt-5">
-    <form action="/logout" method="post">
-        @csrf
-        <button class="btn btn-danger">Logout</button>
-</div>
+<div class="col-md-12 kotak1 mt-5">
+    <div class="col">
+        <h3 class="mt-0 text-left">
+            <button class="btn btn-danger btn" href="">Back</button>
+        </h3>
+    </div>
 <div class="col-md-12 kotak mt-5">
     <div class="row">
         <h3 class="mt-2 ml-2 text-center">Restoran Terdaftar</h3>
