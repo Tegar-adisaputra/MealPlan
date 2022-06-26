@@ -12,25 +12,25 @@
     </div>
     <div class="row kolom">
         <table class="table table-striped text-center ">
-            <tr>
-                <th>id</th>
-                <th>Nama Restoran</th>
-                <th>Alamat</th>
-                <th>Pilihan</th>
-            </tr>
-            @foreach ($data as $resto)
-            <tr>
-                <td>{{ $resto['id'] }}</td>
-                <td>{{ $resto['nama_resto'] }}</td>
-                <td>{{ $resto['alamat_resto'] }}</td>
-                <td>
-                    <button class="btn btn-success">Edit</button>
-                    <button class="btn btn-primary">Detail</button>
-                    <button class="btn btn-danger ml-5">Hapus</button>
-                </td>
-            </tr>
-            @endforeach
-        </table>
+                <tr>
+                    <th>id</th>
+                    <th>Nama Restoran</th>
+                    <th>Alamat</th>
+                    <th>Pilihan</th>
+                </tr>
+                    @foreach ($data as $resto)
+                <tr>
+                    <td>{{ $resto['id'] }}</td>
+                    <td>{{ $resto['nama_resto'] }}</td>
+                    <td>{{ $resto['alamat_resto'] }}</td>
+                    <td>
+                        <button class="btn btn-success">Edit</button>
+                        <button class="btn btn-primary">Detail</button>
+                        <button class="btn btn-danger ml-5">Hapus</button>
+                    </td>
+                </tr>
+                    @endforeach
+            </table>
     </div>
 </div>
 @endsection()

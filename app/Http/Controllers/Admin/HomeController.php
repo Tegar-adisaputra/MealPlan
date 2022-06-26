@@ -19,6 +19,7 @@ class HomeController extends Controller
             'data'=>$data
         ]);
     }
+
     public function halaman_restoran()
     {
         $data = Home::all();
@@ -28,4 +29,5 @@ class HomeController extends Controller
             'data'=>$data
         ]);
     }
+
 }

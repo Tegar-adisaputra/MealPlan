@@ -12,6 +12,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HalamanRestoController;
 use App\Http\Controllers\HalamanUtamaController;
+use App\Http\Controllers\Admin\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +57,7 @@ Route::group([
     Route::get('/', [Admin\LoginAdminController::class, 'formLogin']);
     Route::get('/login', [Admin\LoginAdminController::class, 'formLogin'])->name('admin.login');
     Route::post('/login', [Admin\LoginAdminController::class, 'login']);
+    //Route::get('/halamanrestoranadmin', [Admin\HomeController::class, 'halaman_restoran'])->name('admin.login');
 
     Route::middleware(['auth:admin'])->group(function() {
         Route::post('/logout', [Admin\LoginAdminController::class, 'logout'])->name('admin.logout');
