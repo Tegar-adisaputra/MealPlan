@@ -1,12 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\HalamanUtamaController;
-use App\Http\Controllers\HalamanRestoController;
-use App\Http\Controllers\ProfileController;
 use App\Models\Halamanutama;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\HalamanRestoController;
+use App\Http\Controllers\HalamanUtamaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,12 +49,15 @@ Route::get('/halamanresto/{restoran}', [HalamanRestoController::class, 'show']);
 Route::get('/profile', [ProfileController::class, 'index'])/* ->middleware('auth') */;
 Route::post('/profile', [ProfileController::class, 'update']);
 
-//BAGIAN UNTUK SUPER ADMIN
-Route::get('/admin/home', function () {
-    return view('/admin/home',[
-        "title" => "home"
+Route::get('/resto', function () {
+    return view('/listresto',[
+        "title" => "Daftar Resto"
     ]);
 });
+
+//BAGIAN UNTUK SUPER ADMIN
+
+Route::get('/admin/home', [AdminController::class, 'index']);
 
 Route::get('/admin/login', function () {
     return view('/admin/login',[

@@ -150,6 +150,9 @@ label {
     background-color: #b6b1a6;
     transition-duration: 0.4s;
 }
+.card {
+    background-color: #f8f0df;
+}
 .login {
     font-family: "Acme", sans-serif;
 }
