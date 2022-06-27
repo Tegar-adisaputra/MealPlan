@@ -10,7 +10,7 @@
 <div class="col-md-12 kotak1 mt-5">
     <div class="col">
         <h3 class="mt-2 ml-2 text-center">
-            <button class="btn btn-drak btn" href="">Halaman Restoran</button>
+            <button class="btn btn-drak btn" onclick="location.href='http://127.0.0.1:8000/admin/restoterdaftar#F66L22'">Halaman Restoran</button>
         </h3>
     </div>
    

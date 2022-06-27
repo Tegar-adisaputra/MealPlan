@@ -1,9 +1,9 @@
 @extends('layout.admin')
 @section('container')
-<div class="col-md-12 kotak1 mt-5">
+<div class="col-md-12 mt-5">
     <div class="col">
         <h3 class="mt-0 text-left">
-            <button class="btn btn-danger btn" href="">Back</button>
+            <button class="btn btn-danger btn"onclick="location.href='http://127.0.0.1:8000/admin/home'">Back</button>
         </h3>
     </div>
 <div class="col-md-12 kotak mt-5">
