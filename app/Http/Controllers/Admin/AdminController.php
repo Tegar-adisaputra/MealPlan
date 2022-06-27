@@ -44,4 +44,14 @@ class AdminController extends Controller
         Auth::guard('admin')->logout();
         return redirect()->intended(route('admin.login'));
     }
+
+    public function halaman_restoran()
+    {
+        $data = Home::all();
+        return view('/admin/halamanrestoranadmin',[
+            'title' => 'Home',
+            'active' => 'halamanutama',
+            'data'=>$data
+        ]);
+    }
 }

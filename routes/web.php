@@ -11,6 +11,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HalamanRestoController;
 use App\Http\Controllers\HalamanUtamaController;
+use App\Http\Controllers\Admin\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,6 +69,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
     Route::middleware(['auth:admin'])->group(function(){
         Route::get('/home', [AdminController::class, 'index'])->name('home');
         Route::post('/logout',[AdminController::class,'logout'])->name('logout');
+        Route::get('/restoterdaftar', [AdminController::class, 'halaman_restoran']);
     });
 
 });
@@ -91,4 +93,33 @@ Route::prefix('admin')->name('admin.')->group(function(){
     });
 
 }); */
+
+Route::get('/admin_resto/profile', function () {
+    return view('/admin_resto/profile',[
+        "title" => "Profile"
+    ]);
+}); 
+
+Route::get('/admin_resto/home', function () {
+    return view('/admin_resto/home',[
+        "title" => "Menu menu"
+    ]);
+});
+
+Route::get('/admin_resto/history', function () {
+    return view('/admin_resto/history',[
+        "title" => "History"
+    ]);
+});
+
+Route::get('/admin_resto/booking', function () {
+    return view('/admin_resto/booking',[
+        "title" => "Booking"
+    ]);
+});
+Route::get('/admin_resto/halamanresto', function () {
+    return view('/admin_resto/halamanresto',[
+        "title" => "Halaman Resto"
+    ]);
+});
 
