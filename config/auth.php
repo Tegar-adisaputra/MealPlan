@@ -18,6 +18,16 @@ return [
         'passwords' => 'users',
     ],
 
+    'admin' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\admin::class,
+    ],
+    
+    'admin_resto' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\admin_resto::class,
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -46,10 +56,10 @@ return [
             'provider' => 'admins',
         ],
 
-        /* 'admin_resto' => [
+        'admin_resto' => [
             'driver' => 'session',
             'provider' => 'admin_restos',
-        ], */
+        ],
     ],
 
     /*
@@ -85,10 +95,10 @@ return [
             'model' => App\Models\admin::class,
         ],
 
-        /* 'admin_restos' => [
+        'admin_restos' => [
             'driver' => 'eloquent',
             'model' => App\Models\admin_resto::class,
-        ], */
+        ],
     ],
 
     /*
@@ -113,6 +123,16 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+
+        'admins'=> [
+            'driver'=>'eloquent',
+            'model'=>App\Models\admin::class,
+        ],
+
+        'admin_restos'=> [
+            'driver'=>'eloquent',
+            'model'=>App\Models\admin_resto::class,
+        ]
     ],
 
     /*

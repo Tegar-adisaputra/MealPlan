@@ -1,4 +1,4 @@
-@extends('layout.resto')
+{{-- @extends('layout.resto')
 @section('container')
 <div class="col-md-12 text-center">
     <div class="row text-center mt-5">
@@ -54,4 +54,4 @@
         </div>
     </div>
 </div>
-@endsection()
+@endsection() --}}

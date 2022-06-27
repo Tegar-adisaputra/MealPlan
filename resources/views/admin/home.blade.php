@@ -1,11 +1,11 @@
 @extends('layout.admin')
 @section('container')
 <div class="tombol text-right mt-5">
-    <form action="/logout" method="post">
+    <form action="{{ route('admin.logout') }}" method="post">
         @csrf
         <button class="btn btn-danger">Logout</button>
     </form>
-    <h1 class="text-left mt-2 font">Selamat Datang, nama</h1>
+    <h1 class="text-left mt-2 font">Administrator</h1>
 </div>
 <div class="col-md-12 kotak mt-5">
     <div class="row">

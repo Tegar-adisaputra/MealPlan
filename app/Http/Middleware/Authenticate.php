@@ -13,16 +13,16 @@ class Authenticate extends Middleware
      * @return string|null
      */
     protected function redirectTo($request)
-    {
-        if (! $request->is(config('admin.prefix'), '*')) {
-            return route('admin.login');
-        }
-
-        /* if (! $request->is(config('admin_resto.prefix'), '*')) {
-            return route('resto.login');
-        } */
-        
+    {       
         if (! $request->expectsJson()) {
+            
+            if($request->routeIs('admin.*')){
+                return route('admin.login');
+            }
+
+            if($request->routeIs('admin_resto.*')){
+                return route('admin_resto.login');
+            }
             return route('login');
         }
     }

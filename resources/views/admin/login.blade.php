@@ -1,7 +1,7 @@
 @extends('layout.admin')
 @section('container')
 
-<div class="notif">
+{{-- <div class="notif">
     @if(session()->has('loginError'))
       <div class="alert alert-danger alert-dismissible fade show" style="border-radius:10px;" role="alert">
         {{ session('loginError') }}
@@ -10,7 +10,7 @@
         </button>
       </div>
     @endif
-</div>
+</div> --}}
 
 <div class="row">
     <div class="col-lg-3 col-md-2"></div>
@@ -25,7 +25,12 @@
 
                 <div class="col-lg-12 login-form">
                     <div class="col-lg-12 login-form">
-                        <form action="/admin/login" method="post">
+                        <form action="{{ route('admin.check') }}{{-- /admin/login --}}" method="post">
+                            @if (Session::get('fail'))
+                                <div class="alert alert-danger">
+                                    {{ Session::get('fail') }}
+                                </div>
+                            @endif
                             @csrf
                             <div class="form-group">
                                 <label class="form-control-label">USERNAME</label>
