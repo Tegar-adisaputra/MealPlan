@@ -92,15 +92,38 @@ Route::get('/admin/home', [AdminController::class, 'index']); */
     });
     
 }); */
-/* Route::get('/resto/login', [Admin_Resto\LoginController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/resto/login', [Admin_Resto\LoginController::class, 'authenticate']);
-Route::post('/resto/logout', [Admin_Resto\LoginController::class, 'logout']);
+//  Route::get('/resto/login', [Admin_Resto\LoginController::class, 'index'])->name('login')->middleware('guest');
+// Route::post('/resto/login', [Admin_Resto\LoginController::class, 'authenticate']);
+// Route::post('/resto/logout', [Admin_Resto\LoginController::class, 'logout']);
 
-Route::get('/resto/register', [Admin_Resto\RegisterController::class, 'index'])->middleware('guest');
-Route::post('/resto/register', [Admin_Resto\RegisterController::class, 'store']);
+// Route::get('/resto/register', [Admin_Resto\RegisterController::class, 'index'])->middleware('guest');
+// Route::post('/resto/register', [Admin_Resto\RegisterController::class, 'store']);
 
 Route::get('/resto/profile', function () {
     return view('/resto/profile',[
         "title" => "Profile"
     ]);
-}); */
+}); 
+
+Route::get('/resto/home', function () {
+    return view('/resto/home',[
+        "title" => "Menu menu"
+    ]);
+});
+
+Route::get('/resto/history', function () {
+    return view('/resto/history',[
+        "title" => "History"
+    ]);
+});
+
+Route::get('/resto/booking', function () {
+    return view('/resto/booking',[
+        "title" => "Booking"
+    ]);
+});
+Route::get('/resto/halamanresto', function () {
+    return view('/resto/halamanresto',[
+        "title" => "Halaman Resto"
+    ]);
+});
