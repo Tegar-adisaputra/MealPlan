@@ -6,13 +6,18 @@ body {
     font-family: "Acme", sans-serif;
     color: #f8f0df;
 }
-.kotak1{
-    margin-top: 75px;
-        height: auto;
-        background: #f8f0df;
-        text-align: center;
-        font-family: "Acme", sans-serif;
-        border-radius: 10px;
+.kotak1 {
+    background-color: #f8f0df;
+    text-align: center;
+    font-family: "Acme", sans-serif;
+    border-radius: 10px;
+    color: #707070;
+    transition-duration: 0.5s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.kotak1:hover {
+    transition-duration: 0.5s;
+    background-color: #d0cabd;
 }
 .kotak {
     background-color: #f8f0df;
@@ -212,15 +217,11 @@ label {
     background-color: #f8f0df;
     text-shadow: 1px 2px 2px #707070;
     border-radius: 10px;
-    transition-duration: 0.5s; 
+    transition-duration: 0.5s;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
 }
 
 .tombol1:hover {
-    background-color: #be8e2d ;
+    background-color: #be8e2d;
     transition-duration: 0.5s;
 }
-
-
-

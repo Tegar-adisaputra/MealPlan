@@ -56,8 +56,8 @@
                 <h6 class="mb-0">Deskripsi Restoran</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input type ="text" name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" rows="3" placeholder="deskripsi"
-                  value="{{ old('deskripsi') }}"/>
+                <textarea type ="text" name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" rows="3" placeholder="deskripsi"
+                  value="{{ old('deskripsi') }}"/></textarea>
                   @error('deskripsi')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -162,10 +162,10 @@
                 <h6 class="mb-0">Link Map restoran</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input type="text" name="map_resto" class="form-control @error('map_resto') is-invalid @enderror" rows="3" placeholder="link" 
-                  value="{{ old('map_resto') }}"/>
+                <textarea type="text" name="map_resto" class="form-control @error('map_resto') is-invalid @enderror" rows="3" placeholder="link" 
+                  value="{{ old('map_resto') }}"/></textarea>
                   @error('map_resto')
-                    <div class="invalid-feedback">
+                  <div class="invalid-feedback">
                     {{ $message }}
                   </div>
                   @enderror
@@ -208,8 +208,11 @@
                 <h6 class="mb-0">Kapasitas Restoran</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input type="text" name="kapasitas" class="form-control form-control-lg @error('kapasitas') is-invalid @enderror"
+                <input type="number" min="10" name="kapasitas" class="form-control form-control-lg @error('kapasitas') is-invalid @enderror"
                   value="{{ old('kapasitas') }}"/>
+                  <div class="small text-muted mt-2">
+                    *<i>Minimal kapasitas restoran mitra MealPlan adalah 10 orang</i>
+                  </div>
                   @error('kapasitas')
                     <div class="invalid-feedback">
                     {{ $message }}

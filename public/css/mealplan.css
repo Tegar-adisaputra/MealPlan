@@ -12,6 +12,12 @@ body {
     font-family: "Acme", sans-serif;
     background-color: #f8f0df;
 }
+.card-body {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-family: "Acme", sans-serif;
+    background-color: #f8f0df;
+}
 .card-block {
     height: 300px;
     background-color: #f8f0df;

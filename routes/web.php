@@ -69,7 +69,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
     Route::middleware(['auth:admin'])->group(function(){
         Route::get('/home', [AdminController::class, 'index'])->name('home');
         Route::post('/logout',[AdminController::class,'logout'])->name('logout');
-        Route::get('/restoterdaftar', [AdminController::class, 'halaman_restoran']);
+        Route::get('/listresto', [AdminController::class, 'halaman_restoran']);
     });
 
 });
