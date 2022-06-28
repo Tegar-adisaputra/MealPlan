@@ -76,20 +76,57 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
 
 //BAGIAN UNTUK ADMIN RESTO
-// Route::get('/resto/register', [RegisterController::class, 'create']);
-// Route::post('/resto/register', [RegisterController::class, 'stored']);
+Route::get('/admin_resto/register', [AdminRestoController::class, 'create'])->name('admin_resto.register')->middleware('guest:admin_resto');
+Route::post('/admin_resto/register', [AdminRestoController::class, 'stored']);
 
-// Route::get('/resto/login', function () {
-//     return view('/resto/login',[
-//         "title" => "login"
-//     ]);
-// });
+Route::get('/admin_resto/login', [AdminRestoController::class, 'index'])->name('admin_resto.login')->middleware('guest:admin_resto');
+Route::post('/admin_resto/login', [AdminRestoController::class, 'check']);
+Route::post('/admin_resto/logout', [AdminRestoController::class, 'logout'])->name('admin_resto.logout');
 
-// // Route::get('/resto/register', function () {
-// //     return view('/resto/register',[
-// //         "title" => "Register"
-// //     ]);
-// // });
+Route::get('/admin_resto/profile', function () {
+    return view('/admin_resto/profile',[
+        "title" => "Profile"
+    ]);
+})/* ->name('admin_resto.profile')->middleware('auth:admin_resto') */; 
+
+Route::get('/admin_resto/home', function () {
+    return view('/admin_resto/home',[
+        "title" => "Home"
+    ]);
+})/* ->name('admin_resto.home')->middleware('auth:admin_resto') */;
+
+Route::get('/admin_resto/history', function () {
+    return view('/admin_resto/history',[
+        "title" => "History"
+    ]);
+})/* ->name('admin_resto.history')->middleware('auth:admin_resto') */;
+
+Route::get('/admin_resto/booking', function () {
+    return view('/admin_resto/booking',[
+        "title" => "Booking"
+    ]);
+})/* ->name('admin_resto.booking')->middleware('auth:admin_resto') */;
+
+Route::get('/admin_resto/halamanresto', function () {
+    return view('/admin_resto/halamanresto',[
+        "title" => "Halaman Resto"
+    ]);
+})/* ->name('admin_resto.halamanresto')->middleware('auth:admin_resto') */;
+
+
+
+
+/* Route::get('/admin_resto/login', function () {
+     return view('/admin_resto/login',[
+         "title" => "login"
+     ]);
+ })->name('admin_resto.login');
+
+Route::get('/admin_resto/register', function () {
+     return view('/admin_resto/register',[
+         "title" => "Register"
+     ]);
+ })->name('admin_resto.register'); */
 
 /* Route::prefix('admin_resto')->name('admin_resto.')->group(function(){
 
@@ -109,33 +146,4 @@ Route::prefix('admin')->name('admin.')->group(function(){
     });
 
 }); */
-
-Route::get('/admin_resto/profile', function () {
-    return view('/admin_resto/profile',[
-        "title" => "Profile"
-    ]);
-}); 
-
-Route::get('/admin_resto/home', function () {
-    return view('/admin_resto/home',[
-        "title" => "Menu menu"
-    ]);
-});
-
-Route::get('/admin_resto/history', function () {
-    return view('/admin_resto/history',[
-        "title" => "History"
-    ]);
-});
-
-Route::get('/admin_resto/booking', function () {
-    return view('/admin_resto/booking',[
-        "title" => "Booking"
-    ]);
-});
-Route::get('/admin_resto/halamanresto', function () {
-    return view('/admin_resto/halamanresto',[
-        "title" => "Halaman Resto"
-    ]);
-});
 

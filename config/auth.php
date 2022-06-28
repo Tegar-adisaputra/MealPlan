@@ -25,7 +25,7 @@ return [
     
     'admin_resto' => [
         'driver' => 'eloquent',
-        'model' => App\Models\admin_resto::class,
+        'model' => App\Models\Restoran::class,
     ],
 
     /*
@@ -58,7 +58,7 @@ return [
 
         'admin_resto' => [
             'driver' => 'session',
-            'provider' => 'admin_restos',
+            'provider' => 'restorans',
         ],
     ],
 
@@ -95,9 +95,9 @@ return [
             'model' => App\Models\admin::class,
         ],
 
-        'admin_restos' => [
+        'restorans' => [
             'driver' => 'eloquent',
-            'model' => App\Models\admin_resto::class,
+            'model' => App\Models\Restoran::class,
         ],
     ],
 
@@ -129,9 +129,9 @@ return [
             'model'=>App\Models\admin::class,
         ],
 
-        'admin_restos'=> [
+        'restorans'=> [
             'driver'=>'eloquent',
-            'model'=>App\Models\admin_resto::class,
+            'model'=>App\Models\Restoran::class,
         ]
     ],
 

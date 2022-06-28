@@ -50,7 +50,7 @@ class RegisterController extends Controller
         return redirect('/login'); 
     }
     public function create(){
-        return view('/resto/register',[
+        return view('/admin_resto/register',[
             'title' => 'Register',
             'active' => 'register'
         ]);

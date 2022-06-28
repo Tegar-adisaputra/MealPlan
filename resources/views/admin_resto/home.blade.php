@@ -2,8 +2,8 @@
 @section('container')
 
 <div style="height: 750px;">
-    <div class="font text-center">
-        <h1>Selamat Datang Admin Restoran </h1>
+    <div class="font text-center"><br>
+        <h1>Selamat Datang Admin Restoran</h1>
 
 
     </div>

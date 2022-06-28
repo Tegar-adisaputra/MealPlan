@@ -16,12 +16,12 @@ class CreateRestoransTable extends Migration
         Schema::create('restorans', function (Blueprint $table) {
             $table->id();
             $table->string('nama_resto');  
-            $table->string('username');  
+            $table->string('username')->unique();  
             $table->text('deskripsi_resto');
             $table->string('no_telp');
             $table->string('gambar')->nullable();
             /* $table->text('menu'); */
-            $table->text('email');
+            $table->text('email')->unique();
             $table->text('nama_pemilik');
             $table->string('nohp_pemilik');
             $table->text('alamat_resto');
