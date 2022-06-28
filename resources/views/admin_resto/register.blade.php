@@ -27,7 +27,7 @@
               </div>
               <div class="col-md-9 pe-5">
                 <input type="text" name="name" class="form-control form-control-lg @error('name') is-invalid @enderror" 
-                  value="{{ old('name') }}"/>
+                  value="{{ old('name') }}" required/>
                   @error('name')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -42,7 +42,7 @@
               </div>
               <div class="col-md-9 pe-5">
                 <input type="text" name="username" class="form-control form-control-lg @error('username') is-invalid @enderror" 
-                  value="{{ old('username') }}"/>
+                  value="{{ old('username') }}" required/>
                   @error('username')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -56,8 +56,8 @@
                 <h6 class="mb-0">Deskripsi Restoran</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <textarea type ="text" name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" rows="3" placeholder="deskripsi"
-                  value="{{ old('deskripsi') }}"/></textarea>
+                <input type ="text" name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" rows="3" placeholder="deskripsi"
+                  value="{{ old('deskripsi') }}" required/>
                   @error('deskripsi')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -73,7 +73,7 @@
               </div>
               <div class="col-md-9 pe-5">
                 <input type="text" name="no_telp" class="form-control form-control-lg @error('no_telp') is-invalid @enderror"
-                  value="{{ old('no_telp') }}"/>
+                  value="{{ old('no_telp') }}" required/>
                   @error('no_telp')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -103,7 +103,7 @@
               </div>
               <div class="col-md-9 pe-5">
                 <input type="email" name="email" class="form-control form-control-lg @error('email') is-invalid @enderror" placeholder="example@example.com"
-                  value="{{ old('email') }}"/>
+                  value="{{ old('email') }}" required/>
                   @error('email')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -118,7 +118,7 @@
               </div>
               <div class="col-md-9 pe-5">
                 <input type="text" name="nama_pemilik" class="form-control form-control-lg @error('nama_pemilik') is-invalid @enderror"
-                  value="{{ old('nama_pemilik') }}"/>
+                  value="{{ old('nama_pemilik') }}" required/>
                   @error('nama_pemilik')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -133,7 +133,7 @@
               </div>
               <div class="col-md-9 pe-5">
                 <input type="text" name="nohp_pemilik" class="form-control form-control-lg @error('nohp_pemilik') is-invalid @enderror"
-                  value="{{ old('nohp_pemilik') }}"/>
+                  value="{{ old('nohp_pemilik') }}" required/>
                   @error('nohp_pemilik')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -148,7 +148,7 @@
               </div>
               <div class="col-md-9 pe-5">
                 <input type="text" name="alamat" class="form-control form-control-lg @error('alamat') is-invalid @enderror"
-                  value="{{ old('alamat') }}"/>
+                  value="{{ old('alamat') }}" required/>
                   @error('alamat')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -162,10 +162,10 @@
                 <h6 class="mb-0">Link Map restoran</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <textarea type="text" name="map_resto" class="form-control @error('map_resto') is-invalid @enderror" rows="3" placeholder="link" 
-                  value="{{ old('map_resto') }}"/></textarea>
+                <input type="text" name="map_resto" class="form-control @error('map_resto') is-invalid @enderror" rows="3" placeholder="link" 
+                  value="{{ old('map_resto') }}" required/>
                   @error('map_resto')
-                  <div class="invalid-feedback">
+                    <div class="invalid-feedback">
                     {{ $message }}
                   </div>
                   @enderror
@@ -179,7 +179,7 @@
               </div>
               <div class="col-md-9 pe-5">
                 <input type="text" name="provinsi" class="form-control form-control-lg @error('provinsi') is-invalid @enderror"
-                  value="{{ old('provinsi') }}"/>
+                  value="{{ old('provinsi') }}" required/>
                   @error('provinsi')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -194,7 +194,7 @@
               </div>
               <div class="col-md-9 pe-5">
                 <input type="text" name="kotakabupaten" class="form-control form-control-lg @error('kotakabupaten') is-invalid @enderror"
-                  value="{{ old('kotakabupaten') }}"/>
+                  value="{{ old('kotakabupaten') }}" required/>
                   @error('kotakabupaten')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -208,11 +208,8 @@
                 <h6 class="mb-0">Kapasitas Restoran</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input type="number" min="10" name="kapasitas" class="form-control form-control-lg @error('kapasitas') is-invalid @enderror"
-                  value="{{ old('kapasitas') }}"/>
-                  <div class="small text-muted mt-2">
-                    *<i>Minimal kapasitas restoran mitra MealPlan adalah 10 orang</i>
-                  </div>
+                <input type="text" name="kapasitas" class="form-control form-control-lg @error('kapasitas') is-invalid @enderror"
+                  value="{{ old('kapasitas') }}" required/>
                   @error('kapasitas')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -226,7 +223,7 @@
                 <h6 class="mb-0">Password</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input type="password" name="password" class="form-control form-control-lg @error('password') is-invalid @enderror" placeholder="password"/>
+                <input type="password" name="password" class="form-control form-control-lg @error('password') is-invalid @enderror" placeholder="password" required/>
                   @error('password')
                     <div class="invalid-feedback">
                     {{ $message }}

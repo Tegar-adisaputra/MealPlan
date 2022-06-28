@@ -1,8 +1,10 @@
 @extends('layout/layout')
 @section('container')
-    <div class="center">
+@include('sweetalert::alert')
+
+  <div class="center">
     <h1 class="font2">Register</h1>
-      <form action="/register" method="post">
+      <form action="{{ route('register') }}" method="post">
         @csrf
         <div class="txt_field">
           <input type="text" name="username" class="@error('username') is-invalid @enderror" id="username" required value="{{ old('username') }}">
@@ -37,7 +39,7 @@
         
         <input type="submit" value="Register">
         <div class="signup_link">
-          Already a member? <a href="/login"><b>Login</b></a>
+          Already a member? <a href="{{ route('login') }}"><b>Login</b></a>
         </div>
       </form>
     </div>    

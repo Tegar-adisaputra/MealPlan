@@ -19,21 +19,21 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
-        if(Auth::guard('admin')->check())
-        {
-            return redirect()->route('admin.home');
-        }
-
-        /* if(Auth::guard('admin_resto')->check())
-        {
-            return redirect()->route('resto.home');
-        } */
-        
         $guards = empty($guards) ? [null] : $guards;
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                
+                if($guard === 'admin'){
+                    return redirect()->route('admin.home');
+                }
+
+                if($guard === 'admin_resto'){
+                    return redirect()->route('admin_resto.home');
+                }
+
+                return redirect()->route('halamanutama');
+                //return redirect(RouteServiceProvider::HOME);
             }
         }
 

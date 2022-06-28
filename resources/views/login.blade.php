@@ -1,9 +1,6 @@
 @extends('layout/layout')
 @section('container')
-{{-- @include('layout.splashscreen') --}}
-    {{-- <div class="splash text-center">
-        <h1 class="fade-in">MealPlan</h1>
-    </div> --}}
+@include('sweetalert::alert')
     
    <div class="notif">
       @if(session()->has('loginError'))
@@ -18,7 +15,7 @@
 
     <div class="center">
       <h1 class="font2">Login</h1>
-      <form action="/login" method="post">
+      <form action="{{ route('login') }}" method="post">
         @csrf
         <div class="txt_field">
           <input type="text" name="username" class="@error('username') is-invalid @enderror" id="username" required value="{{ old('username') }}">
@@ -38,7 +35,7 @@
 {{--         <div class="pass">Forgot Password?</div> --}}
         <input type="submit" value="Login">
         <div class="signup_link">
-          Not a member? <a href="/register"><b>Register</b></a>
+          Not a member? <a href="{{ route('register') }}"><b>Register</b></a>
         </div>
       </form>
     </div>

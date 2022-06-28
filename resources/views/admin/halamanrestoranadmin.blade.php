@@ -13,7 +13,7 @@
     <div class="row kolom">
         <table class="table table-striped text-center ">
                 <tr>
-                    <th>id</th>
+                    <th>Id</th>
                     <th>Nama Restoran</th>
                     <th>Alamat</th>
                     <th>Pilihan</th>
