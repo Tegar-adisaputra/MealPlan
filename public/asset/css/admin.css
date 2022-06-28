@@ -6,6 +6,14 @@ body {
     font-family: "Acme", sans-serif;
     color: #f8f0df;
 }
+.kotak1{
+    margin-top: 75px;
+        height: auto;
+        background: #f8f0df;
+        text-align: center;
+        font-family: "Acme", sans-serif;
+        border-radius: 10px;
+}
 .kotak {
     background-color: #f8f0df;
     font-family: "Acme", sans-serif;
@@ -140,3 +148,79 @@ label {
     font-family: "Acme", sans-serif;
     text-shadow: 1px 2px 2px #707070;
 }
+.footer-basic {
+    padding: 40px 0;
+    background-color: #ffffff;
+    color: #4b4c4d;
+}
+
+.footer-basic ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer-basic li {
+    padding: 0 10px;
+}
+
+.footer-basic ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+    opacity: 1;
+}
+
+.footer-basic .social {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.footer-basic .social > a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0 8px;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.footer-basic .social > a:hover {
+    opacity: 0.9;
+}
+
+.footer-basic .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 0;
+}
+
+.tombol1 {
+    background-color: #f8f0df;
+    text-shadow: 1px 2px 2px #707070;
+    border-radius: 10px;
+    transition-duration: 0.5s; 
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+}
+
+.tombol1:hover {
+    background-color: #be8e2d ;
+    transition-duration: 0.5s;
+}
+
+
+

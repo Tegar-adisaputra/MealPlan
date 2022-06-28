@@ -1,8 +1,11 @@
 @extends('layout.admin')
 @section('container')
 <div class="tombol text-right mt-5">
-    <button class="btn btn-danger">logout</button>
-    <h1 class="text-left mt-2 font">Selamat Datang, nama</h1>
+    <form action="{{ route('admin.logout') }}" method="post">
+        @csrf
+        <button class="btn btn-danger">Logout</button>
+    </form>
+    <h1 class="text-left mt-2 font">Administrator</h1>
 </div>
 <div class="col-md-12 kotak mt-5">
     <div class="row">
@@ -37,7 +40,13 @@
             </tr>
             @endforeach
         </table>
+<div class="col-md-12 kotak1 mt-5">
+    <div class="col">
+        <h3 class="mt-2 ml-2 text-center">
+            <button class="btn btn-drak btn" onclick="location.href='http://127.0.0.1:8000/admin/restoterdaftar#F66L22'">Halaman Restoran</button>
+        </h3>
     </div>
+   
 </div>
 
 <div class="col-md-12 kotak mt-5">
@@ -60,7 +69,7 @@
                 <td>Ukraina</td>
                 <td>
                     <button class="btn btn-success">Setujui</button>
-                    <button class="btn btn-primary">Details</button>
+                    <button class="btn btn-primary">Detail</button>
                     <button class="btn btn-danger ml-5">Tolak</button>
                 </td>
             </tr>
