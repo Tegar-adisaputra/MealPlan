@@ -11,6 +11,7 @@
     <div class="row kolom">
         <table class="table table-striped text-center ">
             <tr>
+                <th>No.</th>
                 <th>id</th>
                 <th>Nama Restoran</th>
                 <th>Alamat</th>
@@ -18,13 +19,20 @@
             </tr>
             @foreach ($data as $resto)
             <tr>
+                <td>{{ $loop->iteration }}</td>
                 <td>{{ $resto['id'] }}</td>
                 <td>{{ $resto['nama_resto'] }}</td>
                 <td>{{ $resto['alamat_resto'] }}</td>
                 <td>
                     <button class="btn btn-success">Edit</button>
                     <button class="btn btn-primary">Details</button>
-                    <button class="btn btn-danger ml-5">Hapis</button>
+                    <form action="/admin/home/{{ $resto->slug }}" method="Post" class="d-inline">
+                        @method('delete')
+                        @csrf
+                        <button class="btn btn-danger ml-5" onclick="return confirm('Apakah anda yakin?')">
+                            Hapus
+                        </button>
+                    </form>
                 </td>
             </tr>
             @endforeach

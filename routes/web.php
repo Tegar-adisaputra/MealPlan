@@ -66,17 +66,20 @@ Route::get('/admin/login', function () {
 });
 
 //BAGIAN UNTUK ADMIN RESTO
+Route::get('/resto/register', [RegisterController::class, 'create']);
+Route::post('/resto/register', [RegisterController::class, 'stored']);
+
 Route::get('/resto/login', function () {
     return view('/resto/login',[
         "title" => "login"
     ]);
 });
 
-Route::get('/resto/register', function () {
-    return view('/resto/register',[
-        "title" => "Register"
-    ]);
-});
+// Route::get('/resto/register', function () {
+//     return view('/resto/register',[
+//         "title" => "Register"
+//     ]);
+// });
 
 Route::get('/resto/profile', function () {
     return view('/resto/profile',[

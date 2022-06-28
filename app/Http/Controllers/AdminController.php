@@ -16,4 +16,9 @@ class AdminController extends Controller
             'data'=>$data
         ]);
     }
+
+    public function destroy(Admin $id){
+        Admin::destroy($resto->id);
+        return redirect('/admin/home')->with('success','Data berhasil dihapus');
+    }
 }
