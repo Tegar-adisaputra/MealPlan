@@ -15,7 +15,7 @@
 <div class="row">
     <div class="col-lg-3 col-md-2"></div>
         <div class="col-lg-6 col-md-8 login-box">
-            <div class="col-lg-12 login-key mt-3">
+            <div class="col-lg-12 login-key mt-3 text-center">
                 <i class="fa fa-key" aria-hidden="true"></i>
             </div>
             

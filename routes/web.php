@@ -115,19 +115,6 @@ Route::get('/admin_resto/halamanresto', function () {
 
 
 
-
-/* Route::get('/admin_resto/login', function () {
-     return view('/admin_resto/login',[
-         "title" => "login"
-     ]);
- })->name('admin_resto.login');
-
-Route::get('/admin_resto/register', function () {
-     return view('/admin_resto/register',[
-         "title" => "Register"
-     ]);
- })->name('admin_resto.register'); */
-
 /* Route::prefix('admin_resto')->name('admin_resto.')->group(function(){
 
     Route::middleware(['guest:admin_resto'])->group(function(){
@@ -137,7 +124,6 @@ Route::get('/admin_resto/register', function () {
          Route::post('/create',[AdminRestoController::class,'create'])->name('create');
          Route::post('/check',[AdminRestoController::class,'check'])->name('check');
     });
->>>>>>> 642cf36f9837a455b22428161d6e22c1fd3f83b2
 
     Route::middleware(['auth:admin_resto'])->group(function(){
          Route::view('/home','admin_resto.home')->name('home');
@@ -145,5 +131,5 @@ Route::get('/admin_resto/register', function () {
          Route::post('/logout',[AdminRestoController::class,'logout'])->name('logout');
     });
 
-}); */
+});  */
 
