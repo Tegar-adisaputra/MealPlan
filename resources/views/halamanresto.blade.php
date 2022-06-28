@@ -22,11 +22,11 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
- <a href="#" style="text-decoration: none;" onclick="ShowDiv()">
-<div class="tombol mt-3">
-    <h3 style="padding-top: 5px;">Book Now</h3>
+<!-- <a href="#" style="text-decoration: none;" onclick="ShowDiv()">
+    <div class="tombol mt-3">
+        <h3 style="padding-top: 5px;">Book Now</h3>
     </div>
-</a> 
+</a>  -->
 <div class="container mt-3 mb-3 ">
     <div class="row desc">
         <div class="col-md-6 mt-3">

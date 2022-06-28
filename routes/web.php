@@ -76,8 +76,8 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
 
 //BAGIAN UNTUK ADMIN RESTO
-// Route::get('/resto/register', [RegisterController::class, 'create']);
-// Route::post('/resto/register', [RegisterController::class, 'stored']);
+Route::get('/resto/register', [RegisterController::class, 'create']);
+Route::post('/resto/register', [RegisterController::class, 'stored']);
 
 // Route::get('/resto/login', function () {
 //     return view('/resto/login',[
@@ -85,13 +85,8 @@ Route::prefix('admin')->name('admin.')->group(function(){
 //     ]);
 // });
 
-// // Route::get('/resto/register', function () {
-// //     return view('/resto/register',[
-// //         "title" => "Register"
-// //     ]);
-// // });
 
-/* Route::prefix('admin_resto')->name('admin_resto.')->group(function(){
+Route::prefix('admin_resto')->name('admin_resto.')->group(function(){
 
     Route::middleware(['guest:admin_resto'])->group(function(){
          Route::view('/','admin_resto.login',["title" => "Login"])->name('login');
@@ -100,7 +95,6 @@ Route::prefix('admin')->name('admin.')->group(function(){
          Route::post('/create',[AdminRestoController::class,'create'])->name('create');
          Route::post('/check',[AdminRestoController::class,'check'])->name('check');
     });
->>>>>>> 642cf36f9837a455b22428161d6e22c1fd3f83b2
 
     Route::middleware(['auth:admin_resto'])->group(function(){
          Route::view('/home','admin_resto.home')->name('home');
@@ -108,7 +102,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
          Route::post('/logout',[AdminRestoController::class,'logout'])->name('logout');
     });
 
-}); */
+}); 
 
 Route::get('/admin_resto/profile', function () {
     return view('/admin_resto/profile',[
