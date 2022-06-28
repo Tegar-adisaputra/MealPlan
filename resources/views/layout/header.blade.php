@@ -1,5 +1,5 @@
 <div class="header">
-    <a href="{{ route('halamanutama') }}{{-- / --}}" style="text-decoration:none;">
+    <a href="/" style="text-decoration:none;">
     <div class="h1h">
         <h1>MealPlan</h1>
     </div>
@@ -14,11 +14,11 @@
                 </a>
             </li>
             <div class="dropdown-content">
-                <a href="{{ route('profile') }}"><i class="fa-solid fa-circle-user"></i> Profil Saya</a>
+                <a href="/profile"><i class="fa-solid fa-circle-user"></i> Profil Saya</a>
                 <div class="dropdown-divider"></div>
                 <!-- <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> -->
                 <li>
-                    <form action="{{ route('logout') }}" method="post">
+                    <form action="/logout" method="post">
                         @csrf
                         <button type="submit" class="dropdown-item"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
                     </form>
@@ -26,7 +26,7 @@
             </div>
             @else
             <li class="nav-item dropdown">
-                <a href="{{ route('login') }}" class="nav-link sapa" {{ ($active === "login") ? 'active' : '' }}><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+                <a href="/login" class="nav-link sapa" {{ ($active === "login") ? 'active' : '' }}><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
             </li>
             @endauth
         </ul>    

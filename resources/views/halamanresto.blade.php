@@ -11,10 +11,25 @@
     <div class="carousel-item active">
       <img src="{{ '/img/'.$restoran['gambar'] }}" width="1100" height="500">
       <div class="carousel-caption">
-        <h3>{{ $restoran['nama_resto'] }}</h3>
-        <p>{{$restoran['deskripsi_resto']}}</p>
+        <h3>Soto Betawi Bu Dian</h3>
+        <p>Rumah Makan Soto Betawi Asli</p>
       </div>   
     </div>
+    <div class="carousel-item">
+      <img src="/img/sotobetawi_budian (1).jpeg" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Soto Betawi Bu Dian</h3>
+        <p>Rumah Makan Soto Betawi Asli</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="/img/sotobetawi_budian (2).jpeg" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Soto Betawi Bu Dian</h3>
+        <p>Rumah Makan Soto Betawi Asli</p>
+      </div>   
+    </div>
+  </div>
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </a>
@@ -22,11 +37,11 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
-<!-- <a href="#" style="text-decoration: none;" onclick="ShowDiv()">
-    <div class="tombol mt-3">
-        <h3 style="padding-top: 5px;">Book Now</h3>
+{{-- <a href="#" style="text-decoration: none;" onclick="ShowDiv()">
+<div class="tombol mt-3">
+    <h3 style="padding-top: 5px;">Book Now</h3>
     </div>
-</a>  -->
+</a> --}}
 <div class="container mt-3 mb-3 ">
     <div class="row desc">
         <div class="col-md-6 mt-3">

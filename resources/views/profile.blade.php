@@ -32,7 +32,7 @@
 <div class="card">
     <div class="card-body">
         <h4><i class="fa-solid fa-pen-to-square"></i> Edit Profile</h4>
-        <form action="{{ route('profile') }}{{-- /profile --}}" class="{{ ($active === "profile") ? 'active' : '' }}" method="post">
+        <form action="/profile" class="{{ ($active === "profile") ? 'active' : '' }}" method="post">
             @csrf
             <div class="form-group row">
                 <label for="username" class="col-md-2 col-form-label text-md-right">{{ __('Username') }}</label>

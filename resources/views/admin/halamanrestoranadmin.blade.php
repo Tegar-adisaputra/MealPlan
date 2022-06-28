@@ -26,7 +26,7 @@
                     <td>
                         <button class="btn btn-success">Edit</button>
                         <button class="btn btn-primary">Detail</button>
-                        <button class="btn btn-danger ml-5" onclick="return confirm('Apakah anda yakin?')">Hapus</button>
+                        <button class="btn btn-danger ml-5">Hapus</button>
                     </td>
                 </tr>
                     @endforeach
