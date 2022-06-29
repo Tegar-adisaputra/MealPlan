@@ -1,6 +1,11 @@
 @extends('layout.admin')
 @section('container')
-
+<div class="tombol text-right mt-5">
+    <form action="{{ route('admin_resto.logout') }}" method="post">
+        @csrf
+        <button class="btn btn-danger">Logout</button>
+    </form>
+</div>
 <div style="height: 750px;">
     <div class="font text-center"><br>
         <h1>Selamat Datang Admin Restoran</h1>

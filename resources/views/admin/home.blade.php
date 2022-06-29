@@ -17,7 +17,7 @@
     </div>
     <div class="col-md-3"></div>
 </div>
-<div class="row mt-3">
+<!--<div class="row mt-3">
     <div class="col-md-3"></div>
     <div class="col-md-6 kotak1">
         <a href="#" style="text-decoration:none;">
@@ -25,11 +25,11 @@
         </a>
     </div>
     <div class="col-md-3"></div>
-</div>
+</div>-->
 <div class="row mt-3">
     <div class="col-md-3"></div>
     <div class="col-md-6 kotak1">
-        <a href="3" style="text-decoration:none;">
+        <a href="#" style="text-decoration:none;">
         <h1 class="mt-2" style="color:#707070;">Transaksi</h1>
         </a>
     </div>

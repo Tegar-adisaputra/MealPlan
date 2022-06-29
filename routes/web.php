@@ -45,8 +45,8 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/halamanutama', [HalamanUtamaController::class, 'index'])->name('halamanutama');
 
-Route::get('/halamanresto', [HalamanRestoController::class, 'index']);
-Route::get('/halamanresto/{restoran}', [HalamanRestoController::class, 'show']);
+Route::get('/halamanresto', [HalamanRestoController::class, 'index'])->name('halamanresto')->middleware('auth');
+Route::get('/halamanresto/{restoran}', [HalamanRestoController::class, 'show'])->name('halamanresto')->middleware('auth');
 
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
 Route::post('/profile', [ProfileController::class, 'update']);

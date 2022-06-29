@@ -1,5 +1,10 @@
 @extends('layout.resto')
 @section('container')
+    <div class="col">
+        <h3 class="mt-0 text-left">
+            <button class="btn btn-danger btn" onclick="window.location.href = 'http://127.0.0.1:8000/admin_resto/home';"onclick="history.href">Back</button>
+        </h3>
+    </div>
 <div class="col-md-12 text-center">
     <div class="row text-center mt-5">
         <div class="col-md-12 text-center kotakprofil">
