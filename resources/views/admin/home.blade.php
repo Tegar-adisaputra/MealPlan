@@ -30,7 +30,7 @@
     <div class="col-md-3"></div>
     <div class="col-md-6 kotak1">
         <a href="#" style="text-decoration:none;">
-        <h1 class="mt-2" style="color:#707070;">Transaksi</h1>
+        <h1 class="mt-2" style="color:#707070;">History</h1>
         </a>
     </div>
     <div class="col-md-3"></div>
