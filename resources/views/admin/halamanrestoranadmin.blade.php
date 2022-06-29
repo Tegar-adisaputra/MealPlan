@@ -3,12 +3,16 @@
 <div class="col-md-12 mt-5">
     <div class="col">
         <h3 class="mt-0 text-left">
-            <button class="btn btn-danger btn"onclick="location.href='http://127.0.0.1:8000/admin/home'">Back</button>
+            <button class="btn btn-danger btn"onclick="history.back()">Back</button>
         </h3>
     </div>
 <div class="col-md-12 kotak mt-5">
     <div class="row">
-        <h3 class="mt-2 ml-2 text-center">Restoran Terdaftar</h3>
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h3 class="mt-3 text-center">Restoran Terdaftar</h3>
+        </div>
+        <div class="col-md-3"></div>
     </div>
     <div class="row kolom">
         <table class="table table-striped text-center ">

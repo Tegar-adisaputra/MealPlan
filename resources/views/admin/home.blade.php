@@ -8,15 +8,33 @@
     <h1 class="text-left mt-2 font">Administrator</h1>
 </div>
 
-<div class="col-md-12 kotak1 mt-5">
-    <div class="col">
-        <h3 class="mt-2 ml-2 text-center">
-            <button class="btn btn-drak btn-block" onclick="location.href='http://127.0.0.1:8000/admin/restoterdaftar'">Daftar Restoran</button>
-        </h3>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 kotak1">
+        <a href="/admin/restoterdaftar" style="text-decoration:none;">
+        <h1 class="mt-2" style="color:#707070;">Restoran Terdaftar</h1>
+        </a>
     </div>
-   
+    <div class="col-md-3"></div>
 </div>
-
+<div class="row mt-3">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 kotak1">
+        <a href="#" style="text-decoration:none;">
+        <h1 class="mt-2" style="color:#707070;">Request Pending</h1>
+        </a>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<div class="row mt-3">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 kotak1">
+        <a href="3" style="text-decoration:none;">
+        <h1 class="mt-2" style="color:#707070;">Transaksi</h1>
+        </a>
+    </div>
+    <div class="col-md-3"></div>
+</div>
 <div class="col-md-12 kotak mt-5">
     <div class="row">
         <h3 class="mt-2 ml-2 text-center">Request Pending</h3>
