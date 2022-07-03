@@ -37,6 +37,6 @@ class HalamanRestoranController extends Controller
             "map_resto" => $request->input("map_resto"),
         ]);
 
-        return redirect()->route("detailrestoran", ["restoran" => $id])->with(["updateRestoSukses" => 1]);
+        return redirect()->route("detailrestoran", ["restoran" => $id])->with(["updateRestoSukses" => "Update Berhasil"]);
     }
 }

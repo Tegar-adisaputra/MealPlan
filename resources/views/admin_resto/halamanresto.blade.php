@@ -2,7 +2,7 @@
 @section('container')
 @include('sweetalert::alert')
 
-{{-- <div class="notif">
+ <div class="notif">
     @if(session()->has('updateRestoSukses'))
       <div class="alert alert-success alert-dismissible fade show" style="border-radius:10px;" role="alert">
         {{ session('updateRestoSukses') }}
@@ -11,7 +11,7 @@
         </button>
       </div>
     @endif
-</div> --}}
+</div> 
 
 
     <div class="col">
