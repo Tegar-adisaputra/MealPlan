@@ -70,6 +70,7 @@ class AdminRestoController extends Controller
         ]);
     }
 
+    // login admin resto
     public function check(Request $request)
     {
         //Validate Inputs

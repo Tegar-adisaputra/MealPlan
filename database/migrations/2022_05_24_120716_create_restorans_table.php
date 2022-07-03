@@ -21,7 +21,7 @@ class CreateRestoransTable extends Migration
             $table->string('no_telp');
             $table->string('gambar')->nullable();
             /* $table->text('menu'); */
-            $table->text('email')->unique();
+            $table->string('email')->unique();
             $table->text('nama_pemilik');
             $table->string('nohp_pemilik');
             $table->text('alamat_resto');

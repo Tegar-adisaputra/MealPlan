@@ -21,7 +21,8 @@
         </div>
 
     </a>
-    <a href="/admin_resto/halamanrestoran" style="text-decoration: none;">
+    <!-- 1 diganti id restoran -->
+    <a href="/admin_resto/halamanrestoran/1" style="text-decoration: none;">
         <div class="col-md-12 mt-5 tombol1">
             <div class="row ">
                 <div class="col-md-12 text-center">

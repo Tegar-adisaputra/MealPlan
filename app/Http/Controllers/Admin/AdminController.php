@@ -32,7 +32,7 @@ class AdminController extends Controller
         if( Auth::guard('admin')->attempt($creds) ){
             return redirect()->route('admin.home');
         }else{
-            return redirect()->route('admin.login')->with('fail','Login tidak berhasil!');
+            return redirect()->route('admin.home')->with('fail','Login tidak berhasil!');
         }
    }
 

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin_Resto\AdminRestoController;
+use App\Http\Controllers\Admin_Resto\HalamanRestoranController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
@@ -114,13 +115,8 @@ Route::get('/admin_resto/booking', function () {
     ]);
 })/* ->name('admin_resto.booking')->middleware('auth:admin_resto') */;
 
-Route::get('/admin_resto/halamanresto', function () {
-    return view('/admin_resto/halamanresto',[
-        "title" => "Halaman Resto"
-    ]);
-})/* ->name('admin_resto.halamanresto')->middleware('auth:admin_resto') */;
-
-
+Route::get('/admin_resto/halamanrestoran/{restoran}', [HalamanRestoranController::class, 'show'])->name("detailrestoran")/* ->name('admin_resto.halamanresto')->middleware('auth:admin_resto') */;
+Route::post('/admin_resto/halamanrestoran/{id}/update', [HalamanRestoranController::class, 'update'])->name('updaterestoran')/* ->name('admin_resto.halamanresto')->middleware('auth:admin_resto') */;
 
 /* Route::prefix('admin_resto')->name('admin_resto.')->group(function(){
 
