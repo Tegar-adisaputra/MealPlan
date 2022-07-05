@@ -37,11 +37,20 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
-{{-- <a href="#" style="text-decoration: none;" onclick="ShowDiv()">
-<div class="tombol mt-3">
-    <h3 style="padding-top: 5px;">Book Now</h3>
+<div class="col-md-12">
+    <div class="row text-center">
+        <div class="col-md-5"></div>
+        <div class="col-md-4 text-center">
+            <a href="/booking" style="text-decoration: none;" onclick="ShowDiv()">
+                <div class="tombol mt-3">
+                    <h3 style="padding-top: 5px;">Book Now</h3>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3"></div>
     </div>
-</a> --}}
+</div>
+
 <div class="container mt-3 mb-3 ">
     <div class="row desc">
         <div class="col-md-6 mt-3">
@@ -272,6 +281,24 @@
 .font3 {
     color: #707070;
     font-family: "Acme", sans-serif;
+}
+.tombol {
+    z-index: 99;
+    background-color: #f8f0df;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    transition-duration: 0.6s;
+    font-family: "Dela Gothic One", cursive;
+    color: #707070;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 500;
+}
+.tombol:hover {
+    background-color: #e3dac7;
+    transition-duration: 0.6s;
 }
 </style>
 @include('layout.footer')

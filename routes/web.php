@@ -58,7 +58,15 @@ Route::get('/resto', function () {
     ]);
 })->name('listresto');
 
+Route::get('/booking', function () {
+    return view('/booking',[
+        "title" => "Order Booking"
+    ]);
+})->name('booking');
 
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //BAGIAN UNTUK SUPER ADMIN
 Route::prefix('admin')->name('admin.')->group(function(){
        
@@ -76,7 +84,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
 });
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //BAGIAN UNTUK ADMIN RESTO
 Route::get('/admin_resto', function () {
     return view('/admin_resto/login',[

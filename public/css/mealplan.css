@@ -6,6 +6,15 @@ body {
     font-family: "Acme", sans-serif;
     color: #f8f0df;
 }
+.btn {
+    background-color: #f8f0df;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    transition-duration: 0.5s;
+}
+.btn:hover {
+    background-color: #b6b1a6;
+    transition-duration: 0.4s;
+}
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
@@ -413,6 +422,11 @@ input[type="submit"]:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
     background-color: #f8f0df;
     border-radius: 15px;
+}
+.kotak {
+    background-color: #f8f0df;
+    font-family: "Acme", sans-serif;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .kolomsearch {
     padding-top: 8px;
