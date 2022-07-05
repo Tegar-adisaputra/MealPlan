@@ -14,7 +14,7 @@ class CreateAdminRestosTable extends Migration
     public function up()
     {
         Schema::create('admin_restos', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_resto');
             $table->string('username')->unique();
             $table->string('nama_resto');
             $table->string('nama_pemilik');   

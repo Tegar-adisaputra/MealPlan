@@ -25,13 +25,14 @@
                 Booking Form
             </h2>
 
-            <form action="">
+            <form action="{{ route('booking') }}"  method="post">
+                @csrf
                 <div class="row align-items-center pt-4 pb-3">
                     <div class="col-md-3 ps-5">
                         <h6 class="mb-0">Nama Pemesan</h6>
                     </div>
                     <div class="col-md-9 pe-5">
-                        <input type="text" name="name" class="form-control form-control-lg " 
+                        <input type="text" name="nama_pemesan" class="form-control form-control-lg " 
                         value="" required/>
                         <div class="invalid-feedback">
                         </div>
@@ -43,7 +44,7 @@
                         <h6 class="mb-0">Jumlah Kursi</h6>
                     </div>
                     <div class="col-md-9 pe-5">
-                        <input type="number" name="name" class="form-control form-control-lg " placeholder="Masukan jumlah kursi"value="" required/>
+                        <input type="number" name="jumlah_kursi" class="form-control form-control-lg " placeholder="Masukan jumlah kursi"value="" required/>
                         <div class="invalid-feedback">
                         </div>
                     </div>
@@ -54,7 +55,7 @@
                         <h6 class="mb-0">Tanggal</h6>
                     </div>
                     <div class="col-md-9 pe-5">
-                        <input type="date" name="name" class="form-control form-control-lg " 
+                        <input type="date" name="tanggal" class="form-control form-control-lg " 
                         value="" required/>
                         <div class="invalid-feedback">
                         </div>
@@ -67,14 +68,14 @@
                     </div>
                     <div class="col-md-5 pe-5">
                         <label for="waktumasuk">Masuk</label>
-                        <input type="time" name="waktumasuk" class="form-control form-control-lg " 
+                        <input type="time" name="masuk" class="form-control form-control-lg " 
                         value="" required/>
                         <div class="invalid-feedback">
                         </div>
                     </div>
                     <div class="col-md-4 pe-5">
                         <label for="waktukeluar">Keluar</label>
-                        <input type="time" name="waktukeluar" class="form-control form-control-lg " 
+                        <input type="time" name="keluar" class="form-control form-control-lg " 
                         value="" required/>
                         <div class="invalid-feedback">
                         </div>

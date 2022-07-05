@@ -14,6 +14,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HalamanRestoController;
 use App\Http\Controllers\HalamanUtamaController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,9 @@ Route::get('/register', [RegisterController::class, 'index'])->name('register')-
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/halamanutama', [HalamanUtamaController::class, 'index'])->name('halamanutama');
+
+Route::get('/booking', [BookingController::class, 'index'])->name('booking')->middleware('auth');
+Route::post('/booking', [BookingController::class, 'store'])->name('booking');
 
 Route::get('/halamanresto', [HalamanRestoController::class, 'index'])->name('halamanresto')->middleware('auth');
 Route::get('/halamanresto/{restoran}', [HalamanRestoController::class, 'show'])->name('halamanresto')->middleware('auth');
