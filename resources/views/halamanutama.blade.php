@@ -97,7 +97,7 @@
           </div>
         </a>
 			</div>
-      @endforeach
+    @endforeach
 			<div class="col-3">
 				<div class="card card-block card-1">
           <img src="img/dummy.jpg" alt="" class="gambarresto">
