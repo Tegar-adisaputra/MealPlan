@@ -90,7 +90,7 @@ Route::get('/admin_resto', function () {
     return view('/admin_resto/login',[
         "title" => "Login"
     ]);
-})/* ->name('admin_resto.login')->middleware('auth:admin_resto') */;
+})->name('admin_resto.login')->middleware('guest:admin_resto');
 
 Route::get('/admin_resto/register', [AdminRestoController::class, 'create'])->name('admin_resto.register')->middleware('guest:admin_resto');
 Route::post('/admin_resto/register', [AdminRestoController::class, 'stored']);
@@ -103,28 +103,28 @@ Route::get('/admin_resto/profile', function () {
     return view('/admin_resto/profile',[
         "title" => "Profile"
     ]);
-})/* ->name('admin_resto.profile')->middleware('auth:admin_resto') */; 
+})->name('admin_resto.profile')->middleware('auth:admin_resto'); 
 
 Route::get('/admin_resto/home', function () {
     return view('/admin_resto/home',[
         "title" => "Home"
     ]);
-})/* ->name('admin_resto.home')->middleware('auth:admin_resto') */;
+})->name('admin_resto.home')->middleware('auth:admin_resto');
 
 Route::get('/admin_resto/history', function () {
     return view('/admin_resto/history',[
         "title" => "History"
     ]);
-})/* ->name('admin_resto.history')->middleware('auth:admin_resto') */;
+})->name('admin_resto.history')->middleware('auth:admin_resto');
 
 Route::get('/admin_resto/booking', function () {
     return view('/admin_resto/booking',[
         "title" => "Booking"
     ]);
-})/* ->name('admin_resto.booking')->middleware('auth:admin_resto') */;
+})->name('admin_resto.booking')->middleware('auth:admin_resto');
 
-Route::get('/admin_resto/halamanrestoran/{restoran}', [HalamanRestoranController::class, 'show'])->name("detailrestoran")/* ->name('admin_resto.halamanresto')->middleware('auth:admin_resto') */;
-Route::post('/admin_resto/halamanrestoran/{id}/update', [HalamanRestoranController::class, 'update'])->name('updaterestoran')/* ->name('admin_resto.halamanresto')->middleware('auth:admin_resto') */;
+Route::get('/admin_resto/halamanrestoran/{restoran}', [HalamanRestoranController::class, 'show'])->name('admin_resto.halamanresto')->middleware('auth:admin_resto');
+Route::post('/admin_resto/halamanrestoran/{id}/update', [HalamanRestoranController::class, 'update'])->name('admin_resto.halamanresto')->middleware('auth:admin_resto');
 
 /* Route::prefix('admin_resto')->name('admin_resto.')->group(function(){
 
