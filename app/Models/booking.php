@@ -15,5 +15,6 @@ class booking extends Model
         'jam_keluar',
         'tanggal',
         'catatan',
+        'kode',
     ];
 }
