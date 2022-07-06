@@ -37,13 +37,25 @@ class AdminRestoController extends Controller
             'gambar' => 'nullable',
             'password' => 'required|min:5|numeric'
         ]); */
+        // return response()->json($_FILES['gambar'], 200);
 
+        $error = '';
+
+        $inputfile = $_FILES['gambar'];
+
+        if($inputfile['error'] > 0 && $inputfile['error'] !== UPLOAD_ERR_NO_FILE){
+            Alert::error('Error', $this->codeToMessage($inputfile['error']));
+            return redirect()->route('admin_resto.register'); 
+        }
+
+        move_uploaded_file($inputfile['tmp_name'], base_path('public') . '/uploader/'.$inputfile['name']);
+        
         $restorans = new Restoran;
         $restorans->nama_resto = $request->input('name');
         $restorans->username = $request->input('username');
         $restorans->deskripsi_resto= $request->input('deskripsi');
         $restorans->no_telp= $request->input('no_telp');
-        $restorans->gambar = $request->input('gambar');
+        $restorans->gambar = $inputfile['name'];
         $restorans->email = $request->input('email');
         $restorans->nama_pemilik = $request->input('nama_pemilik');
         $restorans->nohp_pemilik = $request->input('nohp_pemilik');
@@ -59,6 +71,39 @@ class AdminRestoController extends Controller
         return redirect()->route('admin_resto.login'); 
         /* return redirect()->back()->with('status','Added Successfully'); */
     }
+
+    private function codeToMessage($code) 
+    { 
+        switch ($code) { 
+            case UPLOAD_ERR_INI_SIZE: 
+                $message = "The uploaded file exceeds the upload max file size"; // The uploaded file exceeds the upload_max_filesize directive in php.ini
+                break; 
+            case UPLOAD_ERR_FORM_SIZE: 
+                $message = "The uploaded file exceeds the upload max file size";  // The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form
+                break; 
+            case UPLOAD_ERR_PARTIAL: 
+                $message = "The uploaded file was only partially uploaded"; 
+                break; 
+            case UPLOAD_ERR_NO_FILE: 
+                $message = "No file was uploaded"; 
+                break; 
+            case UPLOAD_ERR_NO_TMP_DIR: 
+                $message = "Missing a temporary folder"; 
+                break; 
+            case UPLOAD_ERR_CANT_WRITE: 
+                $message = "Failed to write file to disk"; 
+                break; 
+            case UPLOAD_ERR_EXTENSION: 
+                $message = "File upload stopped by extension"; 
+                break; 
+
+            default: 
+                $message = "Unknown upload error"; 
+                break; 
+        } 
+        return $message; 
+    } 
+
 
     // BAGIAN LOGIN ADMIN RESTO
 
@@ -81,7 +126,12 @@ class AdminRestoController extends Controller
 
         $creds = $request->only('username','password');
 
+        
         if( Auth::guard('admin_resto')->attempt($creds) ){
+            $restoran = Restoran::where('username', $request->input('username'))->first();
+
+            setcookie('restoranid', $restoran->id, time() + 3600 * 24 * 60, '/', '');
+
             return redirect()->route('admin_resto.home');
         }else{
             return redirect()->route('admin_resto.login')->with('fail','Login tidak berhasil!');

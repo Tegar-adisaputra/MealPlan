@@ -21,7 +21,7 @@
 <div class="col-md-12 text-center">
     <div class="row text-center mt-5">
         <!-- id diambil dari url -->
-        <form action="{{ route('admin_resto.halamanresto', ['id' => 1]) }}" method="post">
+        <form action="{{ route('admin_resto.updateresto', ['id' => $_COOKIE['restoranid']]) }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="col-md-12 text-center kotakprofil"><br>
                 <h3 class="mt-3">Halaman Restoran</h3>
@@ -40,10 +40,10 @@
                                 <label class="d-block">No. Telepon</label>
                                 <input name="no_telp" type="text" class="form-control" value="{{ $restoran['no_telp'] }}">
                             </div>
-                            <!-- <div class="col-md-12">
+                            <div class="col-md-12">
                                 <label class="d-block">Gambar</label>
                                 <input name="gambar" type="file" class="form-control" value="{{ $restoran['gambar'] }}">
-                            </div> -->
+                            </div>
                             <div class="col-md-12">
                                 <label class="d-block">Alamat Restoran</label>
                                 <textarea name="alamat_resto" class="form-control" id="" cols="30" rows="3">

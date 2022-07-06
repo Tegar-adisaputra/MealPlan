@@ -29,4 +29,6 @@ class Restoran extends Authenticatable
         'kapasitas',
         'password',
     ];
+
+    protected $hidden = ['password'];
 }

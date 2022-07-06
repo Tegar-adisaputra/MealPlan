@@ -10,7 +10,7 @@
     <div class="font text-center"><br>
         <h1>Selamat Datang Admin Restoran</h1>
     </div>
-    <a href="/admin_resto/profile" target="blank" style="text-decoration: none;">
+    <a href="/admin_resto/profile/{{$_COOKIE['restoranid']}}" style="text-decoration: none;">
         <div class="col-md-12 mt-5 tombol1">
             <div class="row ">
                 <div class="col-md-12 text-center">
@@ -22,7 +22,7 @@
 
     </a>
     <!-- 1 diganti id restoran -->
-    <a href="/admin_resto/halamanrestoran/1" style="text-decoration: none;">
+    <a href="/admin_resto/halamanrestoran/{{$_COOKIE['restoranid']}}" style="text-decoration: none;">
         <div class="col-md-12 mt-5 tombol1">
             <div class="row ">
                 <div class="col-md-12 text-center">

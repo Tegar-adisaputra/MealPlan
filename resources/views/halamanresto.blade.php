@@ -9,13 +9,13 @@
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{ '/img/'.$restoran['gambar'] }}" width="1100" height="500">
+      <img src="{{ '/uploader/'.$restoran['gambar'] }}" width="1100" height="500">
       <div class="carousel-caption">
         <h3>Soto Betawi Bu Dian</h3>
         <p>Rumah Makan Soto Betawi Asli</p>
       </div>   
     </div>
-    <div class="carousel-item">
+    <!-- <div class="carousel-item">
       <img src="/img/sotobetawi_budian (1).jpeg" width="1100" height="500">
       <div class="carousel-caption">
         <h3>Soto Betawi Bu Dian</h3>
@@ -28,7 +28,7 @@
         <h3>Soto Betawi Bu Dian</h3>
         <p>Rumah Makan Soto Betawi Asli</p>
       </div>   
-    </div>
+    </div> -->
   </div>
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>

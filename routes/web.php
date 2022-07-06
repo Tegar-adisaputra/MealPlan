@@ -13,6 +13,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HalamanRestoController;
 use App\Http\Controllers\HalamanUtamaController;
+use App\Http\Controllers\Admin_Resto\ProfileRestoController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\BookingController;
 
@@ -97,7 +98,7 @@ Route::get('/admin_resto', function () {
 })->name('admin_resto.login')->middleware('guest:admin_resto');
 
 Route::get('/admin_resto/register', [AdminRestoController::class, 'create'])->name('admin_resto.register')->middleware('guest:admin_resto');
-Route::post('/admin_resto/register', [AdminRestoController::class, 'stored']);
+Route::post('/admin_resto/register', [AdminRestoController::class, 'stored'])->name('admin_resto.create');
 
 Route::get('/admin_resto/login', [AdminRestoController::class, 'index'])->name('admin_resto.login')->middleware('guest:admin_resto');
 Route::post('/admin_resto/login', [AdminRestoController::class, 'check']);
@@ -127,8 +128,12 @@ Route::get('/admin_resto/booking', function () {
     ]);
 })->name('admin_resto.booking')->middleware('auth:admin_resto');
 
-Route::get('/admin_resto/halamanrestoran/{restoran}', [HalamanRestoranController::class, 'show'])->name('admin_resto.halamanresto')->middleware('auth:admin_resto');
-Route::post('/admin_resto/halamanrestoran/{id}/update', [HalamanRestoranController::class, 'update'])->name('admin_resto.halamanresto')->middleware('auth:admin_resto');
+Route::get('/admin_resto/halamanrestoran/{restoran}', [HalamanRestoranController::class, 'show'])->name('admin_resto.showresto')->middleware('auth:admin_resto');
+Route::post('/admin_resto/halamanrestoran/{id}/update', [HalamanRestoranController::class, 'update'])->name('admin_resto.updateresto')->middleware('auth:admin_resto');
+
+
+Route::get('/admin_resto/profile/{restoran}', [ProfileRestoController::class, 'show'])->name('admin_resto.showprofile')->middleware('auth:admin_resto');
+Route::post('/admin_resto/profile/{id}/update', [ProfileRestoController::class, 'update'])->name('admin_resto.updateprofile')->middleware('auth:admin_resto');
 
 /* Route::prefix('admin_resto')->name('admin_resto.')->group(function(){
 

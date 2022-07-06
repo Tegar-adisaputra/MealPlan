@@ -89,7 +89,7 @@
     <div class="col-3">
       <a href="/halamanresto/{{$resto["id"]}}">
           <div class="card card-block card-1">
-            <img src="/img/{{ $resto['gambar'] }}" alt="" class="gambarresto">
+            <img src="/uploader/{{ $resto['gambar'] }}" alt="" class="gambarresto">
             <hr>
             <center>
               <h3 class="font3">{{ $resto['nama_resto'] }}</h3>
