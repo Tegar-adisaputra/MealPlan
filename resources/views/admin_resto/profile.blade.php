@@ -2,16 +2,15 @@
 @section('container')
 @include('sweetalert::alert')
 
- <div class="notif">
+<div class="notif">
     @if(session()->has('updateProfileSukses'))
       <div class="alert alert-success alert-dismissible fade show" style="border-radius:10px;" role="alert">
         {{ session('updateProfileSukses') }}
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
+      </div>
     @endif
-<br>
-
 <br>
 <div class="col">
     <h3 class="mt-0 text-left">
@@ -32,23 +31,23 @@
                     </div>
                     <div class="col-md-6 mt-5">
                         <label>Email</label>
-                        <input name="email" type="text" class="form-control" value="{{ $restoran['email'] }}">>
+                        <input name="email" type="text" class="form-control" value="{{ $restoran['email'] }}">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 mt-3">
                         <label>No Telepon</label>
-                        <input name="no_telp" type="text" class="form-control" value="{{ $restoran['no_telp'] }}">>
+                        <input name="no_telp" type="text" class="form-control" value="{{ $restoran['no_telp'] }}">
                     </div>
                     <div class="col-md-6 mt-3">
                         <label>Bergabung Sejak</label>
-                        <input name="created_at" type="date" class="form-control" value="{{ $restoran['created_at'] }}">>
+                        <input name="created_at" type="date" class="form-control" value="{{ $restoran['created_at'] }}">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 mt-3">
                         <label>Kapasitas</label>
-                        <input name="kapasitas" type="text" class="form-control" value="{{ $restoran['kapasitas'] }}">>
+                        <input name="kapasitas" type="text" class="form-control" value="{{ $restoran['kapasitas'] }}">
                     </div>
                 </div>
                 <div class="row">
