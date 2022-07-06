@@ -22,6 +22,7 @@ class CreateBookingsTable extends Migration
             $table->string('jam_masuk');
             $table->string('jam_keluar');
             $table->string('tanggal');
+            $table->string('kode')->nullable();
             $table->text('catatan')->nullable();
             $table->timestamps();
         });

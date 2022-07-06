@@ -7,7 +7,7 @@
 <div class="col-md-12 kotak">
     <div class="row">
         <div class="col-md-7 font3">
-            <h2 class="text-center mt-2">Nama Resto</h3>
+            <h2 class="text-center mt-2">{{ $restoran=['nama_resto'] }}</h3>
             <h3>Alamat</h3>
             <h4>Kapasitas tersedia : </h4>
             <p>Deskripsi</p>
@@ -95,6 +95,7 @@
                     <div class="col-md-12 mt-5">
                     <div class="row text-center">
                         <div class="col-md-4"></div>
+                        <input type="hidden" id="" name="kode" value="{{ uniqid() }}">
                         <div class="col-md-4">
                             <button type="submit" class="btn btn-lg text-center">Book Now!</button>
                         </div>
