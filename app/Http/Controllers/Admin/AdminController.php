@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Admin\Home;
+use App\Models\Admin\History;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
@@ -49,6 +50,14 @@ class AdminController extends Controller
             'title' => 'Home',
             'active' => 'halamanutama',
             'data'=>$data
+        ]);
+    }
+    public function history(){
+        $data = History::all();
+        return view('/admin/history',[
+            'title' => 'History',
+            'active' => 'history',
+            'data'=> $data
         ]);
     }
 }
