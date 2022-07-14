@@ -17,6 +17,7 @@
     <div class="row kolom">
         <table class="table table-striped text-center ">
                 <tr>
+                    <th>No.</th>
                     <th>Id</th>
                     <th>Nama Restoran</th>
                     <th>Alamat</th>
@@ -24,6 +25,7 @@
                 </tr>
                     @foreach ($data as $resto)
                 <tr>
+                    <td>{{$loop->iteration}}</td>
                     <td>{{ $resto['id'] }}</td>
                     <td>{{ $resto['nama_resto'] }}</td>
                     <td>{{ $resto['alamat_resto'] }}</td>
