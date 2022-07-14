@@ -48,7 +48,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/halamanutama', [HalamanUtamaController::class, 'index'])->name('halamanutama');
 
-Route::get('/booking', [BookingController::class, 'index'])->name('booking')->middleware('auth');
+Route::get('/booking/{restoran}', [BookingController::class, 'show'])->name('booking')->middleware('auth');
 Route::post('/booking', [BookingController::class, 'store'])->name('booking');
 
 Route::get('/halamanresto', [HalamanRestoController::class, 'index'])->name('halamanresto')->middleware('auth');
@@ -63,11 +63,7 @@ Route::get('/resto', function () {
     ]);
 })->name('listresto');
 
-Route::get('/booking', function () {
-    return view('/booking',[
-        "title" => "Order Booking"
-    ]);
-})->name('booking');
+Route::get('/booking', [BookingController::class, 'index'])->name('booking');
 
 
 
@@ -122,11 +118,8 @@ Route::get('/admin_resto/history', function () {
     ]);
 })->name('admin_resto.history')->middleware('auth:admin_resto');
 
-Route::get('/admin_resto/booking', function () {
-    return view('/admin_resto/booking',[
-        "title" => "Booking"
-    ]);
-})->name('admin_resto.booking')->middleware('auth:admin_resto');
+Route::get('/admin_resto/booking/{restoran}', [App\Http\Controllers\Admin_Resto\BookingController::class, 'show'])->name('admin_resto.booking')->middleware('auth:admin_resto');
+Route::post('/admin_resto/booking/{id}/update', [App\Http\Controllers\Admin_Resto\BookingController::class, 'update'])->name('admin_resto.updatetanggal')->middleware('auth:admin_resto');
 
 Route::get('/admin_resto/halamanrestoran/{restoran}', [HalamanRestoranController::class, 'show'])->name('admin_resto.showresto')->middleware('auth:admin_resto');
 Route::post('/admin_resto/halamanrestoran/{id}/update', [HalamanRestoranController::class, 'update'])->name('admin_resto.updateresto')->middleware('auth:admin_resto');

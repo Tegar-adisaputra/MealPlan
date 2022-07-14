@@ -7,7 +7,7 @@
 <div class="col-md-12 kotak">
     <div class="row">
         <div class="col-md-7 font3">
-            <h2 class="text-center mt-2">{{ $restoran=['nama_resto'] }}</h3>
+            <h2 class="text-center mt-2">{{ $restoran['nama_resto'] }}</h3>
             <h3>Alamat</h3>
             <h4>Kapasitas tersedia : </h4>
             <p>Deskripsi</p>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="col-md-9 pe-5">
                         <input type="date" name="tanggal" class="form-control form-control-lg " 
-                        value="" required/>
+                        value="" max="{{ $tanggal_maksimal_booking }}" required/>
                         <div class="invalid-feedback">
                         </div>
                     </div>

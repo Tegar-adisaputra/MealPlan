@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\booking;
+use App\Models\Restoran;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -14,10 +15,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-        return view('/booking', [
-            'title' => 'Booking',
-            'active' => 'booking'
-        ]);
+        //
     }
 
     /**
@@ -59,9 +57,20 @@ class BookingController extends Controller
      * @param  \App\Models\booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function show(booking $booking)
+    public function show(Restoran $restoran)
     {
-        //
+        $pengaturan_maksimal_booking = $restoran->maksimal_booking;
+
+        $tanggal_maksimal_booking = date('Y-m-d', strtotime("+ {$pengaturan_maksimal_booking} days"));
+
+        $resto['nama_resto'] = 'test';
+
+        return view('/booking', [
+            'title' => 'Booking',
+            'active' => 'booking',
+            'restoran' => $restoran,
+            'tanggal_maksimal_booking' => $tanggal_maksimal_booking,
+        ]);
     }
 
     /**

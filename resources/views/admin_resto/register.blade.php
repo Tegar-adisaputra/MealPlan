@@ -26,8 +26,8 @@
                 <h6 class="mb-0">Nama Restoran</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input required type="text" name="name" class="form-control form-control-lg @error('name') is-invalid @enderror" 
-                  value="{{ old('name') }}"/>
+                <input type="text" name="nama_resto" class="form-control form-control-lg @error('nama_resto') is-invalid @enderror" 
+                  value="{{ old('nama_resto') }}"/>
                   @error('name')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -41,7 +41,7 @@
                 <h6 class="mb-0">Username</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input required type="text" name="username" class="form-control form-control-lg @error('username') is-invalid @enderror" 
+                <input type="text" name="username" class="form-control form-control-lg @error('username') is-invalid @enderror" 
                   value="{{ old('username') }}"/>
                   @error('username')
                     <div class="invalid-feedback">
@@ -56,9 +56,8 @@
                 <h6 class="mb-0">Deskripsi Restoran</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <textarea type ="text" name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" rows="3" placeholder="deskripsi"
-                  value="{{ old('deskripsi') }}"/></textarea>
-                  @error('deskripsi')
+                <textarea type ="text" name="deskripsi_resto" class="form-control @error('deskripsi_resto') is-invalid @enderror" rows="3" placeholder="deskripsi">{{ old('deskripsi_resto') }}</textarea>
+                  @error('deskripsi_resto')
                     <div class="invalid-feedback">
                     {{ $message }}
                   </div>
@@ -72,7 +71,7 @@
                 <h6 class="mb-0">No. Telepon Restoran</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input required type="text" name="no_telp" class="form-control form-control-lg @error('no_telp') is-invalid @enderror"
+                <input type="tel" name="no_telp" class="form-control form-control-lg @error('no_telp') is-invalid @enderror"
                   value="{{ old('no_telp') }}"/>
                   @error('no_telp')
                     <div class="invalid-feedback">
@@ -87,7 +86,7 @@
                 <h6 class="mb-0">Upload Foto Restoran</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input required name="gambar" class="form-control form-control-lg @error('gambar') is-invalid @enderror" id="formFileLg" type="file"/>
+                <input name="gambar" class="form-control form-control-lg @error('gambar') is-invalid @enderror" id="formFileLg" type="file"/>
                   @error('gambar')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -102,7 +101,7 @@
                 <h6 class="mb-0">Email</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input required type="email" name="email" class="form-control form-control-lg @error('email') is-invalid @enderror" placeholder="example@example.com"
+                <input type="email" name="email" class="form-control form-control-lg @error('email') is-invalid @enderror" placeholder="example@example.com"
                   value="{{ old('email') }}"/>
                   @error('email')
                     <div class="invalid-feedback">
@@ -117,7 +116,7 @@
                 <h6 class="mb-0">Nama Pemilik</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input required type="text" name="nama_pemilik" class="form-control form-control-lg @error('nama_pemilik') is-invalid @enderror"
+                <input type="text" name="nama_pemilik" class="form-control form-control-lg @error('nama_pemilik') is-invalid @enderror"
                   value="{{ old('nama_pemilik') }}"/>
                   @error('nama_pemilik')
                     <div class="invalid-feedback">
@@ -132,7 +131,7 @@
                 <h6 class="mb-0">Nomor HP Pemilik</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input required type="text" name="nohp_pemilik" class="form-control form-control-lg @error('nohp_pemilik') is-invalid @enderror"
+                <input type="text" name="nohp_pemilik" class="form-control form-control-lg @error('nohp_pemilik') is-invalid @enderror"
                   value="{{ old('nohp_pemilik') }}"/>
                   @error('nohp_pemilik')
                     <div class="invalid-feedback">
@@ -147,8 +146,8 @@
                 <h6 class="mb-0">Alamat Restoran</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input required type="text" name="alamat" class="form-control form-control-lg @error('alamat') is-invalid @enderror"
-                  value="{{ old('alamat') }}"/>
+                <input type="text" name="alamat_resto" class="form-control form-control-lg @error('alamat_resto') is-invalid @enderror"
+                  value="{{ old('alamat_resto') }}"/>
                   @error('alamat')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -162,8 +161,7 @@
                 <h6 class="mb-0">Link Map restoran</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <textarea type="text" name="map_resto" class="form-control @error('map_resto') is-invalid @enderror" rows="3" placeholder="link" 
-                  value="{{ old('map_resto') }}"/></textarea>
+                <textarea type="text" name="map_resto" class="form-control @error('map_resto') is-invalid @enderror" rows="3" placeholder="link">{{ old('map_resto') }}</textarea>
                   @error('map_resto')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -178,7 +176,7 @@
                 <h6 class="mb-0">Provinsi</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input required type="text" name="provinsi" class="form-control form-control-lg @error('provinsi') is-invalid @enderror"
+                <input type="text" name="provinsi" class="form-control form-control-lg @error('provinsi') is-invalid @enderror"
                   value="{{ old('provinsi') }}"/>
                   @error('provinsi')
                     <div class="invalid-feedback">
@@ -193,8 +191,8 @@
                 <h6 class="mb-0">Kabupaten/Kota</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input required type="text" name="kotakabupaten" class="form-control form-control-lg @error('kotakabupaten') is-invalid @enderror"
-                  value="{{ old('kotakabupaten') }}"/>
+                <input type="text" name="kabupatenkota" class="form-control form-control-lg @error('kabupatenkota') is-invalid @enderror"
+                  value="{{ old('kabupatenkota') }}"/>
                   @error('kotakabupaten')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -208,7 +206,7 @@
                 <h6 class="mb-0">Kapasitas Restoran</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input required type="number" min="10" placeholder="10" name="kapasitas" class="form-control form-control-lg @error('kapasitas') is-invalid @enderror"
+                <input type="number" min="10" placeholder="10" name="kapasitas" class="form-control form-control-lg @error('kapasitas') is-invalid @enderror"
                   value="{{ old('kapasitas') }}"/>
                   <div class="small text-muted mt-2">
                     *<i>Minimal kapasitas mitra MealPlan adalah 10 orang</i>
@@ -221,12 +219,30 @@
               </div>
             </div>
             <hr class="mx-n3">
+            <div class="row align-items-center pt-4 pb-3">
+              <div class="col-md-3 ps-5">
+                <h6 class="mb-0">Pengaturan Tanggal Booking</h6>
+              </div>
+              <div class="col-md-9 pe-5">
+                <input type="number" min="30" placeholder="30" name="maksimal_booking" class="form-control form-control-lg @error('maksimal_booking') is-invalid @enderror"
+                  value="{{ old('maksimal_booking') }}"/>
+                  <div class="small text-muted mt-2">
+                    *<i>Minimal pengaturan tanggal booking adalah 30 hari kedepan</i>
+                  </div>
+                  @error('maksimal_boooking')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                  </div>
+                  @enderror
+              </div>
+            </div>
+            <hr class="mx-n3">
             <div class="row align-items-center py-3">
               <div class="col-md-3 ps-5">
                 <h6 class="mb-0">Password</h6>
               </div>
               <div class="col-md-9 pe-5">
-                <input required type="password" name="password" class="form-control form-control-lg @error('password') is-invalid @enderror" placeholder="password"/>
+                <input type="password" name="password" class="form-control form-control-lg @error('password') is-invalid @enderror" placeholder="password"/>
                   @error('password')
                     <div class="invalid-feedback">
                     {{ $message }}
@@ -236,7 +252,7 @@
             </div>
             <hr class="mx-n3">
             <div class="px-5 py-4">
-              {{-- <input required type="submit" class="btn btn-secondary" value="Register"> --}}
+              {{-- <input type="submit" class="btn btn-secondary" value="Register"> --}}
               <button type="submit" class="btn btn-lg" >Register</button>
             </div>
             <h6 class="text-center">Sudah jadi mitra?<b><a href="{{ route('admin_resto.login') }}{{-- /admin_resto/login --}}" style="color:black;"> Login!</a></b></h6>

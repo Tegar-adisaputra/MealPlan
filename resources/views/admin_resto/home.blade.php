@@ -44,7 +44,7 @@
         </div>
 
     </a>
-    <a href="/admin_resto/booking" style="text-decoration: none;">
+    <a href="/admin_resto/booking/{{$_COOKIE['restoranid']}}" style="text-decoration: none;">
         <div class="col-md-12 mt-5 tombol1">
             <div class="row ">
                 <div class="col-md-12 text-center">
