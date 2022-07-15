@@ -30,6 +30,7 @@ class CreateRestoransTable extends Migration
             $table->text('kabupatenkota');
             $table->string('kapasitas');
             $table->string('password');
+            $table->string('maksimal_booking');
             $table->timestamps();
         });
     }

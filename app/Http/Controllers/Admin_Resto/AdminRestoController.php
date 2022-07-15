@@ -21,7 +21,7 @@ class AdminRestoController extends Controller
 
     public function stored(Request $request)
     {
-        /* $request->validate([
+        $request->validate([
             'nama_resto' => 'required|min:5|max:255',
             'alamat_resto' => 'required',
             'deskripsi_resto' => 'required',
@@ -35,10 +35,10 @@ class AdminRestoController extends Controller
             'kabupatenkota' => 'required',
             'kapasitas' => 'required|numeric',
             'gambar' => 'nullable',
-            'password' => 'required|min:5|numeric'
-        ]); */
-        // return response()->json($_FILES['gambar'], 200);
-
+            'password' => 'required|min:5',
+            'maksimal_booking' => 'required|min:30|numeric'
+        ]);
+        
         $error = '';
 
         $inputfile = $_FILES['gambar'];
@@ -51,20 +51,21 @@ class AdminRestoController extends Controller
         move_uploaded_file($inputfile['tmp_name'], base_path('public') . '/uploader/'.$inputfile['name']);
         
         $restorans = new Restoran;
-        $restorans->nama_resto = $request->input('name');
+        $restorans->nama_resto = $request->input('nama_resto');
         $restorans->username = $request->input('username');
-        $restorans->deskripsi_resto= $request->input('deskripsi');
+        $restorans->deskripsi_resto = $request->input('deskripsi_resto');
         $restorans->no_telp= $request->input('no_telp');
         $restorans->gambar = $inputfile['name'];
         $restorans->email = $request->input('email');
         $restorans->nama_pemilik = $request->input('nama_pemilik');
         $restorans->nohp_pemilik = $request->input('nohp_pemilik');
-        $restorans->alamat_resto = $request->input('alamat');
+        $restorans->alamat_resto = $request->input('alamat_resto');
         $restorans->map_resto = $request->input('map_resto');
         $restorans->provinsi = $request->input('provinsi');
-        $restorans->kabupatenkota = $request->input('kotakabupaten');
+        $restorans->kabupatenkota = $request->input('kabupatenkota');
         $restorans->kapasitas = $request->input('kapasitas');
         $restorans->password = Hash::make($request->input('password'));
+        $restorans->maksimal_booking = $request->input('maksimal_booking');
         $restorans->save();
 
         Alert::success('Success', 'Anda telah berhasil mendaftar sebagai admin restoran.');

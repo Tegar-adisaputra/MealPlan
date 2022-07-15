@@ -19,17 +19,19 @@
                 <th>Tanggal Booking</th>
                 <th>Pilihan</th>
             </tr>
+            @foreach($data as $book)
             <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>tets</td>
-                <td>test</td>
-                <td>0101</td>
+                <td>{{$loop->iteration}}</td>
+                <td>{{$book['id_booking']}}</td>
+                <td>{{ $book['nama_pemesan'] }}</td>
+                <td>{{ $book['nama_resto'] }}</td>
+                <td>{{ $book['created_at'] }}</td>
                 <td>
                     <button class="btn btn-primary">Detail</button>
                     <button class="btn btn-info">Cetak</button>
                 </td>
             </tr>
+            @endforeach
         </table>
     </div>
 </div>

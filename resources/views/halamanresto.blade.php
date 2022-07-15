@@ -41,7 +41,7 @@
     <div class="row text-center">
         <div class="col-md-5"></div>
         <div class="col-md-4 text-center">
-            <a href="/booking" style="text-decoration: none;" onclick="ShowDiv()">
+            <a href="/booking/{{ request()->route('restoran')->id }}" style="text-decoration: none;" onclick="ShowDiv()">
                 <div class="tombol mt-3">
                     <h3 style="padding-top: 5px;">Book Now</h3>
                 </div>
