@@ -5,17 +5,17 @@ use App\Models\Halamanutama;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin_Resto\AdminRestoController;
 use App\Http\Controllers\Admin_Resto\HalamanRestoranController;
-use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin_Resto\ProfileRestoController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HalamanRestoController;
 use App\Http\Controllers\HalamanUtamaController;
-use App\Http\Controllers\Admin_Resto\ProfileRestoController;
-use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\HistoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,17 +57,14 @@ Route::get('/halamanresto/{restoran}', [HalamanRestoController::class, 'show'])-
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
 Route::post('/profile', [ProfileController::class, 'update']);
 
+Route::get('/history', [HistoryController::class, 'index'])->name('history')->middleware('auth');
+
+
 Route::get('/resto', function () {
     return view('/listresto',[
         "title" => "Daftar Resto"
     ]);
 })->name('listresto');
-
-Route::get('/booking', function () {
-    return view('/booking',[
-        "title" => "Order Booking"
-    ]);
-})->name('booking');
 
 
 

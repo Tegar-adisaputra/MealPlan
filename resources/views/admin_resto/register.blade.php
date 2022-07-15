@@ -163,7 +163,7 @@
               </div>
               <div class="col-md-9 pe-5">
                 <textarea type="text" name="map_resto" class="form-control @error('map_resto') is-invalid @enderror" rows="3" placeholder="link" 
-                  value="{{ old('map_resto') }}"/></textarea>
+                  value="{{ old('map_resto') }}"></textarea>
                   @error('map_resto')
                     <div class="invalid-feedback">
                     {{ $message }}
