@@ -8,9 +8,9 @@
     <div class="row">
         <div class="col-md-7 font3">
             <h2 class="text-center mt-2">{{ $restoran['nama_resto'] }}</h3>
-            <h3>Alamat</h3>
-            <h4>Kapasitas tersedia : </h4>
-            <p>Deskripsi</p>
+            <h3>{{ $restoran['alamat_resto'] }}</h3>
+            <h4>Kapasitas tersedia : <b> {{ $restoran['kapasitas'] }}</b></h4>
+            <p>{{ $restoran['deskripsi_resto'] }}</p>
         </div>
         <div class="col-md-5">
             <img src="/img/abuba.jpg" style="width:400px;" class="mt-3 mb-3" alt="">
@@ -96,6 +96,8 @@
                     <div class="row text-center">
                         <div class="col-md-4"></div>
                         <input type="hidden" id="" name="kode" value="{{ uniqid() }}">
+                        <input type="hidden" id="" name="nama_resto" value="{{ $restoran['nama_resto'] }}">
+                        <input type="hidden" id="" name="id_resto" value="{{ $restoran['id'] }}">
                         <div class="col-md-4">
                             <button type="submit" class="btn btn-lg text-center">Book Now!</button>
                         </div>

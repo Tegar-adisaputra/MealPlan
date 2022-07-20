@@ -47,6 +47,8 @@ class BookingController extends Controller
         $bookings->jam_keluar = $request->input('keluar');
         $bookings->catatan = $request->input('catatan');
         $bookings->kode = $request->input('kode');
+        $bookings->id_resto = $request->input('id_resto');
+        $bookings->nama_resto = $request->input('nama_resto');
         $bookings->save();
         return redirect()->route('booking'); 
     }
