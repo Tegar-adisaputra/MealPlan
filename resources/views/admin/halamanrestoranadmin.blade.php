@@ -3,7 +3,7 @@
 <div class="col-md-12 mt-5">
     <div class="col">
         <h3 class="mt-0 text-left">
-            <button class="btn btn-danger btn"onclick="history.back()">Back</button>
+            <button class="btn btn-secondary btn"onclick="history.back()">Back</button>
         </h3>
     </div>
 <div class="col-md-12 kotak mt-5">
