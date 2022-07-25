@@ -6,5 +6,7 @@
             <h1>Daftar Restoran</h1>
         </div>
     </div>
+    <div class="row">
+    </div>
 </div>
 @endsection()

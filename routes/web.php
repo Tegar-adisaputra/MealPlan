@@ -83,6 +83,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('/home', [AdminController::class, 'index'])->name('home');
         Route::post('/logout',[AdminController::class,'logout'])->name('logout');
         Route::get('/restoterdaftar', [AdminController::class, 'halaman_restoran']);
+        Route::post('/restoterdaftar', [AdminController::class, 'stored'])->name('halaman_restoran');
         Route::get('/history', [AdminController::class, 'history'])->name('history');
     });
 
