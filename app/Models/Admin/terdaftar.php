@@ -5,9 +5,10 @@ namespace App\Models\Admin;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Home extends Model
+class terdaftar extends Model
 {
-    protected $table='restorans';
+    use HasFactory;
+    protected $table='terdaftar';
     protected $fillable = [
         'care',
         'name',
@@ -27,5 +28,4 @@ class Home extends Model
     ];
 
     protected $hidden = ['password'];
-} 
-
+}
