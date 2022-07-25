@@ -17,6 +17,8 @@
                 <a href="{{ route('profile') }}"><i class="fa-solid fa-circle-user"></i> Profil Saya</a>
                 <div class="dropdown-divider"></div>
                 <!-- <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> -->
+                <a href="{{ route('history') }}"><i class="fa-solid fa-clock-rotate-left"></i> History</a>
+                <div class="dropdown-divider"></div>
                 <li>
                     <form action="{{ route('logout') }}" method="post">
                         @csrf

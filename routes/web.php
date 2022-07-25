@@ -59,7 +59,6 @@ Route::post('/profile', [ProfileController::class, 'update']);
 
 Route::get('/history', [HistoryController::class, 'index'])->name('history')->middleware('auth');
 
-
 Route::get('/resto', function () {
     return view('/listresto',[
         "title" => "Daftar Resto"

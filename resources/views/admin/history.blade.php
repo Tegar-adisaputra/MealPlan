@@ -13,7 +13,7 @@
         <table class="table table-striped">
             <tr>
                 <th>No.</th>
-                <th>id booking</th>
+                <th>Id Booking</th>
                 <th>Nama Pemesan</th>
                 <th>Nama Resto</th>
                 <th>Tanggal Booking</th>

@@ -2,17 +2,6 @@
 @section('container')
 @include('sweetalert::alert')
 
-{{-- <div class="notif">
-    @if(session()->has('loginError'))
-      <div class="alert alert-danger alert-dismissible fade show" style="border-radius:10px;" role="alert">
-        {{ session('loginError') }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    @endif
-</div> --}}
-
 <div class="row login">
     <div class="col-lg-3 col-md-2"></div>
     <div class="col-lg-6 col-md-8 login-box">
@@ -25,7 +14,7 @@
 
         <div class="col-lg-12 login-form">
             <div class="col-lg-12 login-form">
-                <form action="{{ route('admin_resto.login') }}{{-- {{ route('admin_resto.login') }} --}}" method="post">
+                <form action="{{ route('admin_resto.login') }}" method="post">
                     @if (Session::get('fail'))
                         <div class="alert alert-danger">
                             {{ Session::get('fail') }}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\booking;
 use App\Models\Restoran;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class BookingController extends Controller
 {
@@ -50,7 +51,9 @@ class BookingController extends Controller
         $bookings->id_resto = $request->input('id_resto');
         $bookings->nama_resto = $request->input('nama_resto');
         $bookings->save();
-        return redirect()->route('booking'); 
+        
+        Alert::success('Success', 'Anda telah berhasil melakukan reservasi!');
+        return redirect('/halamanutama'); 
     }
 
     /**

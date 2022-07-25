@@ -19,4 +19,5 @@ class booking extends Model
         'nama_resto',
         'kode',
     ];
+
 }

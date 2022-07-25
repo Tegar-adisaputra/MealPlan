@@ -12,23 +12,29 @@
     <div class="row kotak mt-2">
         <table class="table table-striped">
             <tr>
-                <th class="text-center align-middle">Booking ID</th>
+                <th class="text-center align-middle">No.</th>
+                <th class="text-center align-middle">Id Booking</th>
                 <th class="text-center align-middle">Nama Pemesan</th>
                 <th class="text-center align-middle">Nama Restoran</th>
                 <th class="text-center align-middle">Tanggal Booking</th>
-                <th class="text-center align-middle">Waktu Booking</th>
-                <th class="text-center align-middle">Aksi</th>
+                <th class="text-center align-middle">Kode Booking</th>
+                {{-- <th class="text-center align-middle">QR Code</th> --}}
             </tr>
+            
+            <?php $no=1; ?>
+            @foreach ($history as $data)
             <tr>
-                <td class="text-center align-middle">1</td>
-                <td class="text-center align-middle">1</td>
-                <td class="text-center align-middle">test</td>
-                <td class="text-center align-middle">test</td>
-                <td class="text-center align-middle">test</td>
-                <td class="text-center align-middle">
+                <td class="text-center align-middle"> {{ $no++ }} </td>
+                <td class="text-center align-middle">{{ $data->id_booking }}</td>
+                <td class="text-center align-middle">{{ $data->nama_pemesan }}</td>
+                <td class="text-center align-middle">{{ $data->nama_resto }}</td>
+                <td class="text-center align-middle">{{ $data->created_at }}</td>
+                <td class="text-center align-middle">{{ $data->kode }}</td>
+                {{-- <td class="text-center align-middle">
                     <button class="btn btn-primary">Detail</button>
-                </td>
+                </td> --}}
             </tr>
+            @endforeach
         </table>
     </div>
 </div>

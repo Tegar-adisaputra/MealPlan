@@ -1,6 +1,8 @@
 @extends('layout/layout')
 @section('container')
 @include('layout.header')
+@include('sweetalert::alert')
+
 <div id="demo" class="carousel slide mt-5" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -42,7 +44,7 @@
         <div class="col-md-5"></div>
         <div class="col-md-4 text-center">
             <a href="/booking/{{ request()->route('restoran')->id }}" style="text-decoration: none;" onclick="ShowDiv()">
-                <div class="tombol mt-3">
+                <div class="tombol mt-3 ml-0">
                     <h3 style="padding-top: 5px;">Book Now</h3>
                 </div>
             </a>
@@ -68,21 +70,6 @@
         </div>
     </div>
     
-    <!-- <div class="row mt-5 desc">
-        <div class="col-md-12 mt-3 font">
-            <h2>Review</h2>
-        </div>
-        <div class="col-md 12">
-            <hr>
-            <br>
-            <div class="reviewbox">
-                {{-- <h5><b>Rizky</b></h5> --}}
-                <p class="font-weight-light font-italic">"<i>Belum ada review</i>"</p>
-            </div>
-            
-        </div>
-        
-    </div> -->
 </div>
 <style>
   body {

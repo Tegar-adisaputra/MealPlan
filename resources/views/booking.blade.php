@@ -1,5 +1,7 @@
 @extends('layout.layout')
 @section('container')
+@include('sweetalert::alert')
+
 <button class="btn btn-info mt-3" onclick="history.back()">Kembali</button>
 <h1 class="font text-center mt-3">
     Order Booking
