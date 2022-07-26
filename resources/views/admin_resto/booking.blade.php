@@ -1,5 +1,16 @@
 @extends('layout.resto')
 @section('container')
+@include('sweetalert::alert')
+
+ <div class="notif">
+    @if(session()->has('updateTanggalSukses'))
+      <div class="alert alert-success alert-dismissible fade show" style="border-radius:10px;" role="alert">
+        {{ session('updateTanggalSukses') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    @endif
 
 
 <br>
@@ -40,9 +51,25 @@
                             <th>Kapasitas</th>
                             <th>Tanggal</th>
                             <th>Jam</th>
+                            <th>Kode</th>
                             <th>Pilihan</th>
                         </tr>
+                        <?php $no=1; ?>
+                        @foreach ($booking as $data)
                         <tr>
+                            <td class="text-center align-middle"> {{ $no++ }} </td>
+                            <td class="text-center align-middle">{{ $data->nama_pemesan }}</td>
+                            <td class="text-center align-middle">{{ $data->jumlah_kursi }}</td>
+                            <td class="text-center align-middle">{{ $data->tanggal }}</td>
+                            <td class="text-center align-middle">{{ $data->jam_masuk }}</td>
+                            <td class="text-center align-middle">{{ $data->kode }}</td>
+                            <td>
+                                <a href="{{ route('admin_resto.setuju', ['id' => $_COOKIE['restoranid']]) }}" class="btn btn-success">Setuju</a>
+                                <a href="{{ route('admin_resto.tolak', ['id' => $_COOKIE['restoranid']]) }}" class="btn btn-danger">Tolak</a>
+                            </td>
+                        </tr>
+                        @endforeach
+                        <!-- <tr>
                             <td>1</td>
                             <td>Aditya</td>
                             <td>5 Orang</td>
@@ -52,7 +79,7 @@
                                 <button class="btn btn-success">Setujui</button>
                                 <button class="btn btn-danger ml-3">Tolak</button>
                             </td>
-                        </tr>
+                        </tr> -->
                     </table>
                 </div>
             </div>

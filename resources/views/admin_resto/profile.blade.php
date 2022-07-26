@@ -24,7 +24,7 @@
         <div class="row text-center mt-5">
             <div class="col-md-12 text-center kotakprofil">
                 <h3 class="mt-3">Profil Restoran</h3>
-
+                <div class="row">
                     <div class="col-md-6 mt-5">
                         <label>Nama Pemilik</label>
                         <input name="nama_pemilik" type="text" class="form-control" value="{{ $restoran['nama_pemilik'] }}">
@@ -34,6 +34,7 @@
                         <input name="email" type="text" class="form-control" value="{{ $restoran['email'] }}">
                     </div>
                 </div>
+            
                 <div class="row">
                     <div class="col-md-6 mt-3">
                         <label>No Telepon</label>

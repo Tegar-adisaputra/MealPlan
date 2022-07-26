@@ -115,14 +115,12 @@ Route::get('/admin_resto/home', function () {
     ]);
 })->name('admin_resto.home')->middleware('auth:admin_resto');
 
-Route::get('/admin_resto/history', function () {
-    return view('/admin_resto/history',[
-        "title" => "History"
-    ]);
-})->name('admin_resto.history')->middleware('auth:admin_resto');
+Route::get('/admin_resto/history/{restoran}', [App\Http\Controllers\Admin_Resto\HistoryController::class, 'show'])->name('admin_resto.history')->middleware('auth:admin_resto');
 
 Route::get('/admin_resto/booking/{restoran}', [App\Http\Controllers\Admin_Resto\BookingController::class, 'show'])->name('admin_resto.booking')->middleware('auth:admin_resto');
 Route::post('/admin_resto/booking/{id}/update', [App\Http\Controllers\Admin_Resto\BookingController::class, 'update'])->name('admin_resto.updatetanggal')->middleware('auth:admin_resto');
+Route::get('/admin_resto/booking/{id}/setuju', [App\Http\Controllers\Admin_Resto\BookingController::class, 'setuju'])->name('admin_resto.setuju')->middleware('auth:admin_resto');
+Route::get('/admin_resto/booking/{id}/tolak', [App\Http\Controllers\Admin_Resto\BookingController::class, 'tolak'])->name('admin_resto.tolak')->middleware('auth:admin_resto');
 
 Route::get('/admin_resto/halamanrestoran/{restoran}', [HalamanRestoranController::class, 'show'])->name('admin_resto.showresto')->middleware('auth:admin_resto');
 Route::post('/admin_resto/halamanrestoran/{id}/update', [HalamanRestoranController::class, 'update'])->name('admin_resto.updateresto')->middleware('auth:admin_resto');

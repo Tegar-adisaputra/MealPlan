@@ -25,6 +25,7 @@ class CreateBookingsTable extends Migration
             $table->string('tanggal');
             $table->string('kode')->nullable();
             $table->text('catatan')->nullable();
+            $table->enum('status', ['Pending', 'Setuju', 'Tolak'])->default('Pending');
             $table->timestamps();
         });
     }
