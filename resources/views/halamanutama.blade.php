@@ -19,29 +19,18 @@
     {{-- <li data-target="#demo" data-slide-to="1"></li>
     <li data-target="#demo" data-slide-to="2"></li> --}}
   </ul>
+
+  @foreach($data as $resto) 
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/sotobetawi_budian.jpeg" alt="Los Angeles" width="1100" height="500">
+      <img src="{{ '/uploader/'.$resto['gambar'] }}" alt="Los Angeles" width="1100" height="500">
       <div class="carousel-caption">
-        <h3>Soto Betawi Bu Dian</h3>
-        <p>Rumah Makan Soto Betawi Asli</p>
+        <h3 class="font3">{{ $resto['nama_resto'] }}</h3>
+        <p class="font3">{{ $resto['deskripsi_resto'] }}</p>
       </div>   
     </div>
-    {{-- <div class="carousel-item">
-      <img src="img/dummy.jpg" alt="Chicago" width="1100" height="500">
-      <div class="carousel-caption">
-        <h3>Coming Soon</h3>
-        {{-- <p>Aneka Dessert</p> --}}
-      {{-- </div>   
-    </div>
-    <div class="carousel-item">
-      <img src="img/dummy.jpg" alt="New York" width="1100" height="500">
-      <div class="carousel-caption">
-        <h3>Coming Soon</h3>
-        <p>Western Food</p>
-      </div>   
-    </div> --}}
-  </div>
+    @endforeach
+
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </a>
