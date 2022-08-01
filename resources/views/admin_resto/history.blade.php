@@ -21,6 +21,7 @@
                     <table class="table table-striped text-center ">
                         <tr>
                             <th>No</th>
+                            <th>Id Booking</th>
                             <th>Pemesan</th>
                             <th>Kapasitas</th>
                             <th>Tanggal</th>
@@ -32,6 +33,7 @@
                         @foreach ($booking as $data)
                         <tr>
                             <td class="text-center align-middle"> {{ $no++ }} </td>
+                            <td class="text-center align-middle">{{ $data->id_booking }}</td>
                             <td class="text-center align-middle">{{ $data->nama_pemesan }}</td>
                             <td class="text-center align-middle">{{ $data->jumlah_kursi }}</td>
                             <td class="text-center align-middle">{{ $data->tanggal }}</td>
@@ -40,17 +42,6 @@
                             <td class="text-center align-middle">{{ $data->status }}</td>
                         </tr>
                         @endforeach
-                        <!-- <tr>
-                            <td>1</td>
-                            <td>Aditya</td>
-                            <td>5 Orang</td>
-                            <td>8 Juli 2022</td>
-                            <td>16.00</td>
-                            <td>
-                                <button class="btn btn-success">Setujui</button>
-                                <button class="btn btn-danger ml-3">Tolak</button>
-                            </td>
-                        </tr> -->
                     </table>
                 </div>
             </div>

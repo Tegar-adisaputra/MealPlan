@@ -58,6 +58,7 @@ Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->mi
 Route::post('/profile', [ProfileController::class, 'update']);
 
 Route::get('/history', [HistoryController::class, 'index'])->name('history')->middleware('auth');
+//Route::get('/history/{user}', [HistoryController::class, 'show'])->name('history')->middleware('auth');
 
 Route::get('/resto', function () {
     return view('/listresto',[
@@ -128,21 +129,3 @@ Route::post('/admin_resto/halamanrestoran/{id}/update', [HalamanRestoranControll
 
 Route::get('/admin_resto/profile/{restoran}', [ProfileRestoController::class, 'show'])->name('admin_resto.showprofile')->middleware('auth:admin_resto');
 Route::post('/admin_resto/profile/{id}/update', [ProfileRestoController::class, 'update'])->name('admin_resto.updateprofile')->middleware('auth:admin_resto');
-
-/* Route::prefix('admin_resto')->name('admin_resto.')->group(function(){
-
-    Route::middleware(['guest:admin_resto'])->group(function(){
-         Route::view('/','admin_resto.login',["title" => "Login"])->name('login');
-         Route::view('/login','admin_resto.login',["title" => "Login"])->name('login');
-         Route::view('/register','admin_resto.register',["title" => "Register"])->name('register');
-         Route::post('/create',[AdminRestoController::class,'create'])->name('create');
-         Route::post('/check',[AdminRestoController::class,'check'])->name('check');
-    });
-
-    Route::middleware(['auth:admin_resto'])->group(function(){
-         Route::view('/home','admin_resto.home')->name('home');
-         Route::view('/profile','admin_resto.profile',["title" => "Profile"])->name('profile');
-         Route::post('/logout',[AdminRestoController::class,'logout'])->name('logout');
-    });
-
-});  */

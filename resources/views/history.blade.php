@@ -1,6 +1,6 @@
 @extends('layout.layout')
 @section('container')
-<button class="btn btn-secondary mt-4" onclick="history.back()">Back</button>
+<button class="btn btn-secondary mt-4" onclick="window.location.href = 'http://127.0.0.1:8000/';"onclick="history.href">Back</button>
 <div class="col-md-12">
     <div class="row">
         <div class="col-md-4"></div>
@@ -16,7 +16,8 @@
                 <th class="text-center align-middle">Id Booking</th>
                 <th class="text-center align-middle">Nama Pemesan</th>
                 <th class="text-center align-middle">Nama Restoran</th>
-                <th class="text-center align-middle">Tanggal Booking</th>
+                <th class="text-center align-middle">Tanggal Reservasi</th>
+                <th class="text-center align-middle">Waktu Reservasi</th>
                 <th class="text-center align-middle">Kode Booking</th>
                 {{-- <th class="text-center align-middle">QR Code</th> --}}
             </tr>
@@ -28,7 +29,8 @@
                 <td class="text-center align-middle">{{ $data->id_booking }}</td>
                 <td class="text-center align-middle">{{ $data->nama_pemesan }}</td>
                 <td class="text-center align-middle">{{ $data->nama_resto }}</td>
-                <td class="text-center align-middle">{{ $data->created_at }}</td>
+                <td class="text-center align-middle">{{ $data->tanggal }}</td>
+                <td class="text-center align-middle">{{ $data->jam_masuk }}</td>
                 <td class="text-center align-middle">{{ $data->kode }}</td>
                 {{-- <td class="text-center align-middle">
                     <button class="btn btn-primary">Detail</button>

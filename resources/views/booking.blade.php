@@ -2,7 +2,7 @@
 @section('container')
 @include('sweetalert::alert')
 
-<button class="btn btn-info mt-3" onclick="history.back()">Kembali</button>
+<button class="btn btn-secondary mt-3" onclick="history.back()">Kembali</button>
 <h1 class="font text-center mt-3">
     Order Booking
 </h1>
@@ -15,7 +15,7 @@
             <p>{{ $restoran['deskripsi_resto'] }}</p>
         </div>
         <div class="col-md-5">
-            <img src="/img/abuba.jpg" style="width:400px;" class="mt-3 mb-3" alt="">
+            <img src="{{ '/uploader/'.$restoran['gambar'] }}" style="width:400px;" class="mt-3 mb-3" alt="">
         </div>
     </div>
 </div>

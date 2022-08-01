@@ -8,7 +8,19 @@ use Illuminate\Support\Facades\DB;
 
 class History extends Model
 {
-    /* protected $table='bookings'; */
+    /* protected $table='bookings';
+    protected $fillable = [
+        'care',
+        'id_user',
+        'nama_pemesan',
+        'jam_masuk',
+        'jam_keluar',
+        'tanggal',
+        'catatan',
+        'id_resto',
+        'nama_resto',
+        'kode',
+    ]; */
     
     public function allData()
     {
